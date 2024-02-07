@@ -1,10 +1,11 @@
 ![1_iGdFJTHMIG79N2HChWaooQ](https://github.com/acm-projects/Advisabot/assets/98787282/4cf90921-a07d-4933-b549-ec732a79b249)
-# Advisabot
+# <h1 align="center">Advisabot</h1>
 
+<p align="center">
 Have you ever asked your advisor a question only to wait weeks for a response? Many times, advisors get flooded with questions that have simple answers or problems that are easy to resolve. Advisabot is an advisor chatbot that can answer your questions quickly and efficiently, so you don’t have to worry about it. On top of this, Advisabot can view your profile to help you make decisions about future classes and even generate personalized degree plans. Take the stress out of the logistics and just ask Advisabot for help with your inquiries and classes!
+</p>
 
-
-# MVP (Minimum Viable Product)
+## MVP (Minimum Viable Product)
 
 * Create and train a chatbot that can answer FAQs listed on the ECS Advising Website using Amazon Lex and Amazon Kendra
 * Create an algorithm that can generate a degree plan based on major, credit hours, classes taken
@@ -12,8 +13,7 @@ Have you ever asked your advisor a question only to wait weeks for a response? M
 * Implement User Authentication and adapt for a multitude of majors
 * Advisor Side Interface(includes appointments and priority based assistance)
 
-
-# Stretch Goals
+## Stretch Goals
 
 * Make the bot multilingual to remove language barriers
 * Expand the scope from just advising to everything UTD-related
@@ -21,8 +21,7 @@ Have you ever asked your advisor a question only to wait weeks for a response? M
 * Utilize Nebula API and or look at things like UTD Grades Data and RMP Data(Could take a look at sk.edge architecture)
 * v1.0 at Presentation Night
 
-
-# Milestones
+## Milestones
 
 1. Assign roles - Who will work on frontend & backend?
 2. Set up development environments
@@ -52,7 +51,7 @@ Have you ever asked your advisor a question only to wait weeks for a response? M
 6. Final integration of all features to connect and test
 7. Prepare for the presentation
 
-# Tech Stack
+## Tech Stack
 * Wireframing: Figma
 * IDE: VSC
 * Frontend: React Or React Native with Expo
@@ -63,7 +62,7 @@ Have you ever asked your advisor a question only to wait weeks for a response? M
   * DynamoDB and S3 continue with the fully AWS approach however Firebase/Firestore work great as needed
   * Amazon Textract/Azure CV/Google Cloud Vision for OCR of Transcripts
 
-# Software to Install
+## Software to Install
   - [Visual Studio Code](https://code.visualstudio.com/)
   - [Figma](https://www.figma.com/downloads/)
   - [React](https://react.dev/)
@@ -77,8 +76,8 @@ Have you ever asked your advisor a question only to wait weeks for a response? M
   - [Node](https://nodejs.org/en/)
   - [Express](https://expressjs.com/)
   - [Git](https://git-scm.com/downloads)
-  
-# Tutorials and Resources  
+
+## Tutorials and Resources  
   **General**
   - [Success in ACM Projects](https://docs.google.com/document/d/18Zi3DrKG5e6g5Bojr8iqxIu6VIGl86YBSFlsnJnlM88/edit#heading=h.ky82xv3vtbpi)
   - [API Crash Course w/ timestamps](https://www.youtube.com/watch?v=GZvSYJDk-us)
@@ -98,8 +97,21 @@ Have you ever asked your advisor a question only to wait weeks for a response? M
   - [Textract and React](https://mkayfour.medium.com/using-aws-textract-with-reactjs-6ca1e1bb478a)
   - [Expo & Firebase](https://docs.expo.dev/guides/using-firebase/)
   - [Kendra and Lex](https://www.youtube.com/watch?v=PFauv-8lG5E)
+  - 
+## Git Commands
+
+| Command                       | What it does                        |
+| ----------------------------- | ----------------------------------- |
+| git branch                    | lists all the branches              |
+| git branch "branch name"      | makes a new branch                  |
+| git checkout "branch name"    | switches to speicified branch       |
+| git checkout -b "branch name" | combines the previous 2 commands    |
+| git add .                     | finds all changed files             |
+| git commit -m "Testing123"    | commit with a message               |
+| git push origin "branch"      | push to branch                      |
+| git pull origin "branch"      | pull updates from a specific branch |
   
-  # Meet the Team
+  ## Meet the Team
   
   * Frontend
     * S
