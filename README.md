@@ -1,3 +1,4 @@
+![1_iGdFJTHMIG79N2HChWaooQ](https://github.com/acm-projects/Advisabot/assets/98787282/4cf90921-a07d-4933-b549-ec732a79b249)
 # Advisabot
 
 Have you ever asked your advisor a question only to wait weeks for a response? Many times, advisors get flooded with questions that have simple answers or problems that are easy to resolve. Advisabot is an advisor chatbot that can answer your questions quickly and efficiently, so you don’t have to worry about it. On top of this, Advisabot can view your profile to help you make decisions about future classes and even generate personalized degree plans. Take the stress out of the logistics and just ask Advisabot for help with your inquiries and classes!
@@ -109,6 +110,6 @@ Have you ever asked your advisor a question only to wait weeks for a response? M
     * S
     * M
       
-  * Project Manager: Abis Naqvi - Texas Instruments
+  * Project Manager: Abis Naqvi
     
-  * Industry Mentor: Suraj Khosla - American Airlines
+  * Industry Mentor: Suraj Khosla
