@@ -97,7 +97,7 @@ Have you ever asked your advisor a question only to wait weeks for a response? M
   - [Textract and React](https://mkayfour.medium.com/using-aws-textract-with-reactjs-6ca1e1bb478a)
   - [Expo & Firebase](https://docs.expo.dev/guides/using-firebase/)
   - [Kendra and Lex](https://www.youtube.com/watch?v=PFauv-8lG5E)
-  - 
+
 ## Git Commands
 
 | Command                       | What it does                        |
@@ -112,16 +112,16 @@ Have you ever asked your advisor a question only to wait weeks for a response? M
 | git pull origin "branch"      | pull updates from a specific branch |
   
   ## Meet the Team
+
+ * Frontend
+   * Shraddha Subash
+   * Ram Gudur
+
+* Backend
+  * Ethan Varghese
+  * Sneha Nangunoori
+  * Maruthi Eranki
+      
+* Project Manager: Abis Naqvi
   
-  * Frontend
-    * S
-    * R
-      
-  * Backend
-    * E
-    * S
-    * M
-      
-  * Project Manager: Abis Naqvi
-    
-  * Industry Mentor: Suraj Khosla
+* Industry Mentor: Suraj Khosla
