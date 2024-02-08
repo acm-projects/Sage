@@ -115,12 +115,12 @@ Have you ever asked your advisor a question only to wait weeks for a response? M
 
  * Frontend
    * Shraddha Subash
-   * Ram Gudur
+   * Maruthi Eranki
 
 * Backend
   * Ethan Varghese
   * Sneha Nangunoori
-  * Maruthi Eranki
+  * Ram Gudur
       
 * Project Manager: Abis Naqvi
   
