@@ -111,17 +111,3 @@ Have you ever asked your advisor a question only to wait weeks for a response? M
 | git push origin "branch"      | push to branch                      |
 | git pull origin "branch"      | pull updates from a specific branch |
   
-  ## Meet the Team
-
- * Frontend
-   * Shraddha Subash
-   * Maruthi Eranki
-
-* Backend
-  * Ethan Varghese
-  * Sneha Nangunoori
-  * Ram Gudur
-      
-* Project Manager: Abis Naqvi
-  
-* Industry Mentor: Suraj Khosla
