@@ -51,16 +51,7 @@ Have you ever asked your advisor a question only to wait weeks for a response? M
 6. Final integration of all features to connect and test
 7. Prepare for the presentation
 
-## Tech Stack
-* Wireframing: Figma
-* IDE: VSC
-* Frontend: React Or React Native with Expo
-  * React is an industry applicable library utilized for frontend with web applications.
-  * React Native is a cross compatible framework that paired with expo allows you to bring your apps to life while in development phases
-* Backend: Amazon Kendra and Lex, DynamoDB/S3 Or Firebase/Firestore, Amazon Textract or Microsoft Azure Computer Vision OR Google Cloud Vision API.
-  * Kendra and Lex are for training and natural language processing
-  * DynamoDB and S3 continue with the fully AWS approach however Firebase/Firestore work great as needed
-  * Amazon Textract/Azure CV/Google Cloud Vision for OCR of Transcripts
+
 
 ## Software to Install
   - [Visual Studio Code](https://code.visualstudio.com/)
