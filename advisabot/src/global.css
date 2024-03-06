@@ -1,3 +1,9 @@
+/*import Sudo Var font */
+@import url('https://fonts.cdnfonts.com/css/sudo-var');
+
+
+
+
 html, body{
   height:100%;
   margin: 0;
@@ -5,12 +11,23 @@ html, body{
   overflow: hidden;
 }
 
+/*font*/
 * {
-  font-size: 100%;
-  font-family: Arial;
   background-image: linear-gradient(to top, #BF81EF, #84f8c7);
   background-repeat: no-repeat;
   height: 100%;
+}
+
+.generalFont{
+  font-size: 100%;
+  font-family: 'Sudo Var', sans-serif;  
+
+}
+
+.alternateFont{
+  font-size: 100%;
+  font-family: 'Offside', sans-serif;      
+
 }
 
 * {
@@ -39,6 +56,14 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: 'Sudo Var', sans-serif;
+                                                
+}
+
+
+/* Tablet and Smaller Desktop */
+@media (min-width: 701px) and (max-width: 1120px) {
+  .grid {
+    grid-template-columns: repeat(2, 50%);
+  }
 }

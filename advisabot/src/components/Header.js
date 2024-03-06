@@ -1,9 +1,9 @@
 const Header = () => {
 
   return (
-    <header>
-      <h1>Advisabot</h1>
-    </header>
+    <div >
+      <h1 className="alternateFont" >Advisabot</h1>
+    </div>
   )
 }
 
