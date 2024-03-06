@@ -1,0 +1,13 @@
+{
+  "name": "advisabot",
+  "version": "1.0.0",
+  "description": "![1_iGdFJTHMIG79N2HChWaooQ](https://github.com/acm-projects/Advisabot/assets/98787282/4cf90921-a07d-4933-b549-ec732a79b249)\r # <h1 align=\"center\">Advisabot</h1>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+    
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
