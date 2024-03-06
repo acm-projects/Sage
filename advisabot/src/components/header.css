@@ -1,0 +1,33 @@
+/*import Sudo Var font */
+@import url('https://fonts.cdnfonts.com/css/sudo-var');
+
+
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6rem;
+    min-height: 100vh;
+  }
+
+  .header-container {
+    background-color: #333; /* Background color for the navigation bar */
+    border-bottom: 2px solid #fff; /* Border at the bottom of the navigation bar */
+    width: 100%; /* Make the container span the entire width of the page */
+    box-sizing: border-box; /* Include border and padding in the width */
+  }
+  
+  .header-link {
+    margin-bottom: 10px; /* Adjust as needed */
+  }
+  
+  .navbar{
+    background-color: #333;
+    border: 1px solid #2E1F31;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+  }
