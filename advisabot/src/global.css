@@ -1,6 +1,10 @@
 /*import Sudo Var font */
 @import url('https://fonts.cdnfonts.com/css/sudo-var');
 
+@font-face {
+  font-family: 'Offside';
+  src: url('font/Offside-Regular.ttf');
+}
 
 
 
@@ -9,24 +13,26 @@ html, body{
   margin: 0;
   padding:0;
   overflow: hidden;
-}
-
-/*font*/
-* {
   background-image: linear-gradient(to top, #BF81EF, #84f8c7);
   background-repeat: no-repeat;
   height: 100%;
 }
 
+
+
 .generalFont{
   font-size: 100%;
   font-family: 'Sudo Var', sans-serif;  
-
+  color: white;
 }
 
 .alternateFont, h1{
   font-size: 100%;
-  font-family: 'Offside', sans-serif;      
+  font-family: 'Offside', sans-serif;   
+  color: white;
+  align-items: center;
+  justify-content: center;
+  
 
 }
 
