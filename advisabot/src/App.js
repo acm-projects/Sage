@@ -1,10 +1,14 @@
-import Header from './components/Header';
+import Navbar from './components/Navbar';
+import Home from './Home';
+import RoundedBack from './components/RoundedBackground';
 
 function App() {
 
   return (
     <div className='container'>
-      <Header />
+      <RoundedBack />
+      <Navbar />
+      <Home />
     </div>
   )
 }

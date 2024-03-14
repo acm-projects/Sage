@@ -1,0 +1,61 @@
+h1 {
+  position: absolute;
+  top: 37.6%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-family: "Offside", sans-serif;
+  font-size: 8vw;
+  font-weight: lighter;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.search-container {
+  position: relative;
+  z-index: 1; 
+  margin-top: 165%;
+}
+
+.search-container input[type="text"] {
+  padding: 1vw 5vw;
+  padding-left: 2.2%;
+  display: block;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  font-family: 'SudoVar';
+  font-size: 20px;
+  outline: none;
+}
+
+.search-container button { 
+  position: absolute; 
+  top: 50%;
+  right: 5px;
+  transform: translateY(-500%);
+}
+
+button {
+  margin-top: 0px;
+  padding-right: 6.2%;
+  border: none; 
+  background: none;
+}
+
+button::before {
+  content: ''; 
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns="http://www.w3.org/2000/svg" width="36" height="31" viewBox="0 0 36 31"%3E%3Cpath d="M2.49811 4.12169L8.43298 14.5077C8.70983 14.9922 8.84825 15.2344 8.84825 15.5C8.84825 15.7656 8.70983 16.0078 8.43299 16.4923L2.49811 26.8783C1.25981 29.0453 0.640655 30.1289 1.12348 30.6662C1.6063 31.2035 2.74962 30.7033 5.03624 29.7029L33.3119 17.3323C35.1074 16.5468 36.0051 16.154 36.0051 15.5C36.0051 14.846 35.1074 14.4532 33.3118 13.6677L5.03624 1.2971C2.74962 0.296707 1.6063 -0.203492 1.12348 0.333828C0.640655 0.871147 1.25981 1.95466 2.49811 4.12169Z" fill="%232E1F31" fill-opacity="0.7" /%3E%3C/svg%3E');
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+button:hover::before {
+  filter: grayscale(100%) brightness(0); 
+}
