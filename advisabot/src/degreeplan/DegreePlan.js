@@ -16,7 +16,9 @@ const DegreePlan = () => {
                 <div className='classes'></div>
                 <div className='classes'></div>
                 <div className='classes'></div>
-              
+                <div className='classes'></div>
+                
+                
             </div> 
             <div className='semester ' >
               <p className='specialHeader generalFont'>fall 2022</p>
@@ -32,6 +34,7 @@ const DegreePlan = () => {
             </div>
           </div>
         </div>
+        <button>BUTTON</button>
       </div>
     </div>
   );

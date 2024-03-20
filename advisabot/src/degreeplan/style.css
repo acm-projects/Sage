@@ -13,7 +13,7 @@
   .content {
     flex: 1; /* Make the content div expand to fill the remaining space */
     padding: 20px; /* Add padding to the content */
-    
+    margin-bottom: 130px;
     overflow-y: scroll;
   }
   
@@ -23,9 +23,10 @@
     position: relative;
     background: rgba(46, 31, 49, 0.7);
     border-radius: 30px;
-    padding: 20px;
+    padding: 40px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin: 20px;
+    margin-bottom: 30px;
     display: flex;
     justify-content: space-between; /* Align items at the start of the flex container */
     flex-wrap: wrap; /* Allow items to wrap to the next line if necessary */
@@ -47,11 +48,13 @@
     
   /* Adjust styles for the second div as needed */
   margin: 10px;
+  margin-top: 0px;
+  margin-bottom: 30px;
   margin-right: 20px;
   background: rgb(245, 244, 245); /* Background color */
   border-radius: 30px; /* Adjust the border radius to control the roundness */
   padding: 110px; /* Add padding inside the box */
-  padding-bottom: 120px;
+  padding-bottom: 10px;
   width: 10%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for depth */
   position: relative; /* Ensure elements are positioned relative to their container */
@@ -66,7 +69,7 @@
 .classes{
   
   /* Adjust styles for the second div as needed */
-  margin-bottom: 10px ;
+  margin-bottom: 15px ;
   margin-left: -100px;
   background: rgba(30, 30, 30, 0.7); /* Background color */
   border-radius: 20px; /* Adjust the border radius to control the roundness */
@@ -77,6 +80,7 @@
   display: flex; /* Use flexbox layout */
   justify-content:left; /* Aligmn items at the start of the flex container */
   flex-wrap: wrap;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   
 }
   
