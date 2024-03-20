@@ -4,46 +4,106 @@
     background: rgba(46, 31, 49, 0.7); /* 70% transparency */
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Ensure the div fills the viewport height */
+     /* Ensure the div fills the viewport height */
     margin: 0;
     overflow-y: auto; /* Enable vertical scrolling */
+    height: 100vh;
   }
   
   .content {
     flex: 1; /* Make the content div expand to fill the remaining space */
     padding: 20px; /* Add padding to the content */
+    
+    overflow-y: scroll;
   }
   
+  
+  
   .mainBox {
-    position: relative; 
-    background: rgba(46, 31, 49, 0.7); /* 70% transparency */
-    border-radius: 30px; /* Adjust the border radius to control the roundness */
-    padding: 250px; /* Add padding inside the box */
-    margin: 20px; /* Margin for the mainBox */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for depth */
-  }
-
-  .allClasses {
-    background: rgb(245, 244, 245); /* Background color */
-    border-radius: 30px; /* Adjust the border radius to control the roundness */
-    padding: 50px ; /* Add padding inside the box */
-    position:absolute; /* Position .allClasses absolutely within .mainBox */
-    top: 15px; /* Align .allClasses with the top edge of .mainBox */
-    left: 15px; /* Align .allClasses with the left edge of .mainBox */
-    /*right: 400px;  Align .allClasses with the right edge of .mainBox */
-    bottom: 15px; /* Align .allClasses with the bottom edge of .mainBox */
-    width: 13%;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for depth */
+    position: relative;
+    background: rgba(46, 31, 49, 0.7);
+    border-radius: 30px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    display: flex;
+    justify-content: space-between; /* Align items at the start of the flex container */
+    flex-wrap: wrap; /* Allow items to wrap to the next line if necessary */
+    overflow-y: auto;
     
-}
+  }
 
 .specialHeader{
     color: #bf81ef;
     position: absolute;
-    top: 15px; /* Adjust as needed */
-    left: 30px; /* Adjust as needed */
+    top: 12px; /* Adjust as needed */
+    left: 25px; /* Adjust as needed */
     letter-spacing: -1px;
-    font-weight: medium;
+    font-weight:550;
+    font-size: 2.1rem; 
     
 }
+.allClasses {
+    
+  /* Adjust styles for the second div as needed */
+  margin: 10px;
+  margin-right: 20px;
+  background: rgb(245, 244, 245); /* Background color */
+  border-radius: 30px; /* Adjust the border radius to control the roundness */
+  padding: 110px; /* Add padding inside the box */
+  padding-bottom: 120px;
+  width: 10%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for depth */
+  position: relative; /* Ensure elements are positioned relative to their container */
+  display: flex; /* Use flexbox layout */
+  justify-content:left; /* Align items at the start of the flex container */
+  flex-wrap: wrap;
+  align-self: flex-start;
+  flex-direction: column;
+  align-items: flex-start;
   
+}
+.classes{
+  
+  /* Adjust styles for the second div as needed */
+  margin-bottom: 10px ;
+  margin-left: -100px;
+  background: rgba(30, 30, 30, 0.7); /* Background color */
+  border-radius: 20px; /* Adjust the border radius to control the roundness */
+  width: 310px;
+  height: 80px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for depth */
+  position: relative; /* Ensure elements are positioned relative to their container */
+  display: flex; /* Use flexbox layout */
+  justify-content:left; /* Aligmn items at the start of the flex container */
+  flex-wrap: wrap;
+  
+}
+  
+.flexContainer {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  overflow-x: auto; 
+}
+
+
+
+.semester {
+  /* Adjust styles for the second div as needed */
+  margin: 20px;
+  background: rgb(245, 244, 245); /* Background color */
+  border-radius: 30px; /* Adjust the border radius to control the roundness */
+  padding: 150px; /* Add padding inside the box */
+  width: 10%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for depth */
+  position: relative; /* Ensure elements are positioned relative to their container */
+  display: flex; /* Use flexbox layout */
+  justify-content: flex-start; /* Aligmn items at the start of the flex container */
+  flex-wrap: wrap;
+  padding-bottom:200px;
+}
+
+.semester:nth-last-child(n) {
+  align-self: center;
+}

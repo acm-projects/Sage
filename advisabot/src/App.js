@@ -16,6 +16,7 @@ function App() {
         <Route path='/degreeplan' element={<DegreePlan/>}/>
         <Route path='/profile-page' element={<ProfilePage/>}/>
         <Route path='/chatpage' element={<ChatPage/>}/>
+        <Route path='/chatpage' element={<ChatPage/>}/>
       </Routes>
 
     </div>
