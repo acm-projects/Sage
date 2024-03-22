@@ -19,6 +19,7 @@ Have you ever asked your advisor a question only to wait weeks for a response? M
 * Expand the scope from just advising to everything UTD-related
 * Add the ability to connect to other students that would be able to help when the bot does not have an answer to a question
 * Utilize Nebula API and or look at things like UTD Grades Data and RMP Data(Could take a look at sk.edge architecture)
+* Let users manually add completed credits to the degree plan (so that it will generate future classes assuming that credit is already successfully taken)
 * v1.0 at Presentation Night
 
 ## Milestones
