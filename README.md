@@ -120,7 +120,6 @@ Have you ever asked your advisor a question only to wait weeks for a response? M
 
 * Backend
   * Ethan Varghese
-  * Sneha Nangunoori
   * Ram Gudur
       
 * Project Manager: Abis Naqvi
