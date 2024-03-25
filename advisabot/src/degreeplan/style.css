@@ -73,7 +73,9 @@
   margin-left: -100px;
   background: rgba(30, 30, 30, 0.7); /* Background color */
   border-radius: 20px; /* Adjust the border radius to control the roundness */
-  width: 310px;
+  width: 90%;
+  min-width:310px;
+  max-width:310px;
   height: 80px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for depth */
   position: relative; /* Ensure elements are positioned relative to their container */
@@ -98,8 +100,9 @@
   margin: 20px;
   background: rgb(245, 244, 245); /* Background color */
   border-radius: 30px; /* Adjust the border radius to control the roundness */
-  padding: 150px; /* Add padding inside the box */
-  width: 10%;
+  padding: 160px; /* Add padding inside the box */
+  width: 90%;
+  max-width:190px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for depth */
   position: relative; /* Ensure elements are positioned relative to their container */
   display: flex; /* Use flexbox layout */

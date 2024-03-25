@@ -1,6 +1,38 @@
 // DegreePlan.js
-import React from 'react';
 import './style.css';
+import styled from 'styled-components'
+import Classes from '../components/Classes';
+
+
+const ButtonContainer = styled.div`
+  display: flex; /* Ensure its children are laid out in a row */
+  justify-content: flex-start; /* Align its children to the start (left) of the container */
+  margin-left: 20px;
+`;
+const Button = styled.button`
+
+background-color:#0AB28A;
+color: white;
+padding: 13px 150px;
+border-radius: 20px;
+outline: 0;
+cursor: pointer;
+transition: ease background-color 250ms;
+font-family: 'Sudo Var', sans-serif;
+font-size: 35px;
+letter-spacing: 3px;
+&:hover{
+  background-color: #055c47;
+}
+
+
+`
+
+function clickMe(){
+  alert('you still need to set up the regenerate brother');
+}
+
+
 
 const DegreePlan = () => {
   return (
@@ -12,11 +44,10 @@ const DegreePlan = () => {
             <div className='allClasses'>
               <p className='specialHeader generalFont'>all classes</p>
               
-                <div className='classes'></div>
-                <div className='classes'></div>
-                <div className='classes'></div>
-                <div className='classes'></div>
-                <div className='classes'></div>
+                <Classes/>
+                <Classes/>
+                <Classes/>
+                <Classes/>
                 
                 
             </div> 
@@ -34,8 +65,11 @@ const DegreePlan = () => {
             </div>
           </div>
         </div>
-        <button>BUTTON</button>
+        <ButtonContainer>
+          <Button onClick={clickMe}>regenerate</Button>
+        </ButtonContainer>
       </div>
+      
     </div>
   );
 }
