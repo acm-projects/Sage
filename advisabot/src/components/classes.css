@@ -1,3 +1,5 @@
+
+
 .classes{
   
     /* Adjust styles for the second div as needed */
@@ -16,4 +18,21 @@
     flex-wrap: wrap;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     
+  }
+
+  .semester {
+    /* Adjust styles for the second div as needed */
+    margin: 20px;
+    background: rgb(245, 244, 245); /* Background color */
+    border-radius: 30px; /* Adjust the border radius to control the roundness */
+    padding: 160px; /* Add padding inside the box */
+    width: 90%;
+    max-width:10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for depth */
+    position: relative; /* Ensure elements are positioned relative to their container */
+    display: flex; /* Use flexbox layout */
+    justify-content: flex-start; /* Aligmn items at the start of the flex container */
+    flex-wrap: wrap;
+    padding-bottom:230px;
+    align-items: center;
   }

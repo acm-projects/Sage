@@ -2,6 +2,7 @@
 import './style.css';
 import styled from 'styled-components'
 import Classes from '../components/Classes';
+import Semester from '../components/Semester';
 
 
 const ButtonContainer = styled.div`
@@ -43,26 +44,20 @@ const DegreePlan = () => {
           <div className='flexContainer'>
             <div className='allClasses'>
               <p className='specialHeader generalFont'>all classes</p>
-              
                 <Classes/>
                 <Classes/>
                 <Classes/>
                 <Classes/>
-                
-                
             </div> 
-            <div className='semester ' >
-              <p className='specialHeader generalFont'>fall 2022</p>
+            
+            <div className='flexContainer'>
+              <Semester/>
+              <Semester/>
+              <Semester/>
+              <Semester/>
             </div>
-            <div className='semester '>
-              <p className='specialHeader generalFont'>spring 2023</p>
-            </div>
-            <div className='semester '>
-              <p className='specialHeader generalFont'>fall 2023</p>
-            </div>
-            <div className='semester '>
-              <p className='specialHeader generalFont'>spring 2024</p>
-            </div>
+            
+            
           </div>
         </div>
         <ButtonContainer>

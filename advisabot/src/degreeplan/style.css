@@ -88,7 +88,7 @@
   
 .flexContainer {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   flex-direction: row;
   overflow-x: auto; 
 }
@@ -111,6 +111,3 @@
   padding-bottom:200px;
 }
 
-.semester:nth-last-child(n) {
-  align-self: center;
-}
