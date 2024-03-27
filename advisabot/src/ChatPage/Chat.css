@@ -1,0 +1,84 @@
+.chat-container {
+    position: relative;
+  }
+  
+.chat-outer {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #2E1F31;
+    opacity: 0.7;
+    width: 65.6vw;
+    height: 43vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 15px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.text-field {
+    position: fixed;
+    top: 87.1%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 6.2vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+.text-field input[type="text"] {
+    padding: 1vw 2vw;
+    width: 62.6vw;
+    display: block;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    font-family: 'SudoVar';
+    font-size: 20px;
+    outline: none;
+  }
+
+  .text-field input[type="text"]::placeholder {
+    padding: 0vw 0px;
+}
+
+ .text-field button { 
+    position: absolute; 
+    top: 50%;
+    right: 5px;
+    transform: translateY(-500%);
+  }
+  
+  .submit-button {
+    margin-top: 0px;
+    padding-right: 6.2%;
+    border: none; 
+    background: none;
+  }
+  
+  .submit-button::before {
+    content: ''; 
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 1;
+  }
+  .save-button::before{
+    content: ''; 
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-image: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" width="53" height="51" viewBox="0 0 53 51" fill="none"><path d="M22.7619 15.3423C24.1799 11.9408 24.8888 10.2401 26.0406 10.0044C26.3435 9.94239 26.6565 9.94239 26.9594 10.0044C28.1112 10.2401 28.8202 11.9408 30.2381 15.3423C31.0444 17.2766 31.4476 18.2438 32.202 18.9016C32.4136 19.0861 32.6433 19.2505 32.8878 19.3923C33.7598 19.898 34.8482 19.9918 37.0252 20.1794C40.7104 20.497 42.553 20.6558 43.1156 21.6667C43.2322 21.8761 43.3114 22.1028 43.35 22.3374C43.5366 23.4701 42.182 24.656 39.4729 27.0277L38.7205 27.6863C37.454 28.7952 36.8207 29.3496 36.4544 30.0415C36.2346 30.4566 36.0873 30.9035 36.0183 31.3646C35.9032 32.1332 36.0886 32.9375 36.4595 34.5461L36.592 35.1208C37.2572 38.0055 37.5898 39.4479 37.1746 40.1569C36.8017 40.7937 36.1148 41.2015 35.356 41.2363C34.5113 41.2751 33.321 40.3419 30.9405 38.4753C29.3721 37.2455 28.5879 36.6306 27.7174 36.3904C26.9218 36.1709 26.0782 36.1709 25.2826 36.3904C24.4121 36.6306 23.6279 37.2455 22.0595 38.4753C19.679 40.3419 18.4887 41.2751 17.644 41.2363C16.8852 41.2015 16.1983 40.7937 15.8254 40.1569C15.4103 39.4479 15.7428 38.0056 16.408 35.1208L16.5405 34.5461C16.9114 32.9375 17.0968 32.1332 16.9818 31.3646C16.9127 30.9035 16.7654 30.4566 16.5457 30.0415C16.1794 29.3496 15.5461 28.7952 14.2795 27.6863L13.5272 27.0277C10.818 24.656 9.46343 23.4701 9.64997 22.3374C9.68861 22.1028 9.76784 21.8761 9.88438 21.6667C10.4471 20.6558 12.2897 20.497 15.9748 20.1794C18.1518 19.9918 19.2402 19.898 20.1122 19.3923C20.3567 19.2505 20.5864 19.0861 20.798 18.9016C21.5524 18.2438 21.9556 17.2766 22.7619 15.3423Z" fill="%232E1F31" fill-opacity="0.7" stroke="%232E1F31" stroke-opacity="0.7" stroke-width="2"/></svg>');
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 1;
+  }
+  
+  button:hover::before {
+    filter: grayscale(100%) brightness(0); 
+  }

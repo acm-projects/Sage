@@ -1,0 +1,123 @@
+.mainContainer {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -41.5%);
+    background-color: #2E1F31;
+    opacity: 0.7;
+    width: 47.15vw;
+    height: 68.85vh;
+    color: white;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px; /* Add padding to the main container */
+    padding-top: 10px;
+}
+
+@media screen and (min-width: 768px) {
+    .mainContainer {
+      width: 600px; /* Increase font size for larger screens */
+    }
+}
+
+.titleContainer {
+    font-size: 35px; /* Set default font size */
+    font-weight: lighter;
+    align-self: flex-start;
+    padding-left: 7%;
+    padding-top: 6%;
+}
+  
+@media screen and (min-width: 768px) {
+    .titleContainer {
+      font-size: px; /* Increase font size for larger screens */
+      top: 50%;
+    }
+}
+   
+.buttonContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    transform: translateY(calc(-100% - 5px)); /* Decreased distance */
+    margin-top: 80px; /* Decreased margin */
+}
+  
+.inputContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    transform: translateY(calc(-250% - 5px)); /* Decreased distance */
+}
+
+  
+.inputContainer > .errorLabel {
+    color: red;
+    font-size: 12px;
+}
+  
+.inputBox {
+    height: 30px;
+    width: 40.1vw; /* Adjust the width as desired */
+    font-size: 18px; 
+    border-radius: 5px; 
+    background-color: rgba(255, 255, 255, 0.3);
+    border: 1px solid white;
+    padding-left: 8px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    margin-bottom: 0px;
+}
+
+.inputBox.emailError{
+    border: 1px solid red; 
+}
+
+@media screen and (min-width: 768px) {
+    .inputBox {
+      width: 500px; /* Increase font size for larger screens */
+    }
+}
+
+.inputBox:focus {
+    outline: none; /* Remove default focus outline */
+    border: 1px solid white; /* Change border color to transparent on focus */
+    color: white;
+}
+
+.inputBox::placeholder {
+    color: rgba(255, 255, 255, 0.7);/* Set placeholder text color */
+}
+
+.inputButton{
+    background-color: #0AB28A;
+    color: white;
+    font-family: 'Offside';
+    border-radius: 20px;
+    border: none;
+    width: 40.1vw;
+    height: 40px;
+    font-size: 15px;
+    transform: translateY(calc(+10%)); /* Decreased distance */
+}
+
+@media screen and (min-width: 768px) {
+    .inputButton {
+      height: 50px; /* Increase font size for larger screens */
+      width: 500px;
+      font-size: 17px;
+    }
+}
+
+.errorLabel {
+    position: absolute; 
+    left: 0;
+    color: red;
+    font-size: 14px;
+    margin-top: 70px;
+}

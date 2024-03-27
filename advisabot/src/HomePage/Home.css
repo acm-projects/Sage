@@ -5,24 +5,25 @@ h1 {
   transform: translate(-50%, -50%);
   color: white;
   font-family: "Offside", sans-serif;
-  font-size: 8vw;
+  font-size: 8vw; /* Set initial font size based on viewport width */
   font-weight: lighter;
 }
 
-body {
+.search-container {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  height: 6.2vh;
   display: flex;
   justify-content: center;
+  align-items: center;
+  color: black;
 }
 
-.search-container {
-  position: relative;
-  z-index: 1; 
-  margin-top: 165%;
-}
 
 .search-container input[type="text"] {
-  padding: 1vw 5vw;
-  padding-left: 2.2%;
+  padding: 1vw 2vw;
+  width: 47vw;
   display: block;
   border-radius: 10px;
   border: 1px solid transparent;
