@@ -3,7 +3,18 @@ import './style.css';
 import styled from 'styled-components'
 import Classes from '../components/Classes';
 import Semester from '../components/Semester';
+<<<<<<< Updated upstream
 import Header from '../components/Header';
+=======
+
+import { DndProvider } from 'react-dnd';
+import { HTML5Backend } from 'react-dnd-html5-backend';
+import { render } from 'react-dom'
+
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
 
 const ButtonContainer = styled.div`
   display: flex; /* Ensure its children are laid out in a row */

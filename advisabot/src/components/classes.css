@@ -18,6 +18,7 @@
     flex-wrap: wrap;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     
+<<<<<<< Updated upstream
   }
 
   .semester {
@@ -36,3 +37,28 @@
     padding-bottom:230px;
     align-items: center;
   }
+=======
+  /* Adjust styles for the second div as needed */
+  margin-top: 0px;
+  margin-bottom: 30px;
+  margin-right:40px;
+  background: rgb(245, 244, 245); /* Background color */
+  border-radius: 30px; /* Adjust the border radius to control the roundness */
+  padding: 120px 27px ; /* Add padding inside the box */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for depth */
+  position: relative; /* Ensure elements are positioned relative to their container */
+  display: flex; /* Use flexbox layout */
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items:flex-start;
+  
+}
+
+.drop-area {
+  height: 20px;
+  width: 100%;
+  text-align: center;
+  background-color: burlywood;
+  display: none;
+}
+>>>>>>> Stashed changes
