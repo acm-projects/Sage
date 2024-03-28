@@ -3,7 +3,7 @@ import './style.css';
 import styled from 'styled-components'
 import Classes from '../components/Classes';
 import Semester from '../components/Semester';
-
+import Header from '../components/Header';
 
 const ButtonContainer = styled.div`
   display: flex; /* Ensure its children are laid out in a row */
@@ -39,6 +39,7 @@ const DegreePlan = () => {
   return (
 
     <div className='mainDiv'>
+      <Header/>
       <div className='content'>
         <div className='mainBox'>
           <div className='flexContainer'>

@@ -1,9 +1,9 @@
 import React from 'react'
-
+import RoundedBack from '../components/RoundedBackground'
 const ProfilePage = () => {
   return (
     <div>
-      PROFILEEEEEEE
+      <RoundedBack/>
     </div>
   )
 }
