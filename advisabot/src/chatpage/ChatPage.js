@@ -3,7 +3,6 @@ import Header from '../components/Header'
 const ChatPage = () => {
   return (
     <div>
-      <Header/>
         CHATTTTT
     </div>
   )

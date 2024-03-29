@@ -9,36 +9,23 @@ import './global.css';
 import { DndProvider } from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend';
 import { render } from 'react-dom'
+import { ChakraBaseProvider } from '@chakra-ui/react';
 
 function App() {
 
-  
-
- 
-
   return (
-    <div>
-      
-      <Routes>
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-        <Route path='/degreeplan' element={<DegreePlan/>}></Route>
-        <Route path='/profile-page' element={<ProfilePage/>}></Route>
-=======
-=======
->>>>>>> Stashed changes
-        <Route path='/degreeplan' element={
-          <DndProvider backend={HTML5Backend}>
-            <DegreePlan/>
-          </DndProvider>
-        }/>
-        <Route path='/profile-page' element={<ProfilePage/>}/>
->>>>>>> Stashed changes
-        <Route path='/chatpage' element={<ChatPage/>}/>
-        <Route path='/chatpage' element={<ChatPage/>}/>
-      </Routes>
-
-    </div>
+    <DndProvider backend={HTML5Backend}>
+      <div>
+        <Header/>
+        <Routes>
+            <Route path='/degreeplan' element={<DegreePlan/>}/>
+            <Route path='/profile-page' element={<ProfilePage/>}/>
+            <Route path='/chatpage' element={<ChatPage/>}/>
+            <Route path='/chatpage' element={<ChatPage/>}/>
+          </Routes>
+      </div>
+    </DndProvider>
+    
     
   )
 }

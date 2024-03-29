@@ -6,19 +6,21 @@ import chatImage from '../assets/Wchat.png';
 import degpImage from '../assets/Wdegp.png';
 import profImage from '../assets/Wprof.png';
 
+import '../global.css';
+
 const Navbar = () => {
   return (
     <div className="header-container">
       <nav className="navbar">
-        <Link to="../" className="navbar-logo">
+        <Link to="../" className="navbar-logo ">
           advisabot
         </Link>
         <div className="navbar-links">
-          <Link to="../chat" className="navbar-icon">
+          <Link to="../chat" className="navbar-icon ">
             <img src={chatImage} alt="Chat" />
               Chat
           </Link>
-          <Link to="../degreeplan" className="navbar-icon">
+          <Link to="../degreeplan" className="navbar-iconc">
             <img src={degpImage} alt="Degree Plan" />
               Degree Plan
           </Link>
