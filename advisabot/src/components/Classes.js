@@ -19,7 +19,11 @@ const Classes = () => {
   return (
     <div>
       <div className='classes' ref={drag} >
-        helloooo
+        <div className='T'>
+        </div>
+        <p className='classNum generalFont'>CS XXXX</p>
+        <p className='classTitle generalFont'>computer science</p>
+        <p className='desc generalFont'>this is the description for the class. it will mention pre-requisites and a short description of the class</p>
       </div>
     </div>
   );

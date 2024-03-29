@@ -16,6 +16,7 @@
     display: flex; /* Use flexbox layout */
     justify-content:left; /* Aligmn items at the start of the flex container */
     flex-wrap: wrap;
+    flex-direction: column;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     
   }
@@ -62,4 +63,18 @@
   text-align: center;
   background-color: burlywood;
   display: none;
+}
+
+.classNum, .classTitle, .desc{
+  margin-left: 10px;
+  margin-top: 3px;
+  
+}
+
+.desc{
+  font-size: 12px;
+}
+
+.classNum{
+  font-size: 18px;
 }
