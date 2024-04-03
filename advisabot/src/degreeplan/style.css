@@ -34,16 +34,6 @@
     
   }
 
-.specialHeader{
-    color: #bf81ef;
-    position: absolute;
-    top: 12px; /* Adjust as needed */
-    left: 25px; /* Adjust as needed */
-    letter-spacing: -1px;
-    font-weight:550;
-    font-size: 2.1rem; 
-    
-}
 .allClasses {
     
   /* Adjust styles for the second div as needed */
@@ -53,38 +43,16 @@
   margin-right: 20px;
   background: rgb(245, 244, 245); /* Background color */
   border-radius: 30px; /* Adjust the border radius to control the roundness */
-  padding: 110px; /* Add padding inside the box */
-  padding-bottom: 10px;
-  width: 10%;
+  min-width: 450px;
+  height:500px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for depth */
   position: relative; /* Ensure elements are positioned relative to their container */
   display: flex; /* Use flexbox layout */
-  justify-content:left; /* Align items at the start of the flex container */
-  flex-wrap: wrap;
-  align-self: flex-start;
   flex-direction: column;
   align-items: flex-start;
-  
+  overflow-y:auto;
 }
-.classes{
-  
-  /* Adjust styles for the second div as needed */
-  margin-bottom: 15px ;
-  margin-left: -100px;
-  background: rgba(30, 30, 30, 0.7); /* Background color */
-  border-radius: 20px; /* Adjust the border radius to control the roundness */
-  width: 90%;
-  min-width:310px;
-  max-width:310px;
-  height: 80px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for depth */
-  position: relative; /* Ensure elements are positioned relative to their container */
-  display: flex; /* Use flexbox layout */
-  justify-content:left; /* Aligmn items at the start of the flex container */
-  flex-wrap: wrap;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  
-}
+
   
 .flexContainer {
   display: flex;
@@ -93,21 +61,56 @@
   overflow-x: auto; 
 }
 
-
-
 .semester {
-  /* Adjust styles for the second div as needed */
   margin: 20px;
-  background: rgb(245, 244, 245); /* Background color */
-  border-radius: 30px; /* Adjust the border radius to control the roundness */
-  padding: 160px; /* Add padding inside the box */
-  width: 90%;
-  max-width:190px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for depth */
-  position: relative; /* Ensure elements are positioned relative to their container */
-  display: flex; /* Use flexbox layout */
-  justify-content: flex-start; /* Aligmn items at the start of the flex container */
-  flex-wrap: wrap;
-  padding-bottom:200px;
+  background: rgb(245, 244, 245);
+  border-radius: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  overflow-y: auto; /* Enable vertical scrolling */
+  padding: 160px; /* This padding can be adjusted as needed */
+  padding-bottom: 230px; /* This padding can be adjusted as needed */
+  min-width: 150px; /* Set a minimum width if necessary */
+  width: 90%; /* Set the desired width */
+  max-width: 10px; /* Adjust the maximum width as needed */
+  align-items: center;
 }
 
+
+.specialHeader{
+  margin:15px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: #bf81ef;
+  letter-spacing: -1px;
+  font-weight:550;
+  font-size: 2.4rem; 
+}
+
+.semesterHeader{
+  color: #bf81ef;
+  position: absolute;
+  top: 12px; /* Adjust as needed */
+  left: 25px; /* Adjust as needed */
+  letter-spacing: -1px;
+  font-weight:550;
+  font-size: 2.1rem; 
+  
+}
+
+
+/* Image styles */
+.whiteStar {
+  width: 40px; /* Set the desired width */
+  height: auto; /* Maintain aspect ratio */
+  vertical-align: middle;
+  
+}
+
+/* Text link styles */
+li {
+  text-decoration: none;
+}

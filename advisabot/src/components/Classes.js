@@ -5,6 +5,8 @@ import React from 'react';
 import itemTypes from '../utils/itemType';
 import { useDrag } from 'react-dnd';
 
+
+
 const Classes = () => {
   const [{ isDragging }, drag] = useDrag({
     type: itemTypes.CARD, // Type listed separately
@@ -18,12 +20,15 @@ const Classes = () => {
 
   return (
     <div>
-      <div className='classes' ref={drag} >
-        <div className='T'>
+      <div className='classes' ref={drag}>
+        <p className='classNum generalFont'>CS xxxx</p>
+        <div className='TContainer'>
+          <div className='TNT'>
+            <p className='generalFont TNTtext'>T</p>
+          </div>
         </div>
-        <p className='classNum generalFont'>CS XXXX</p>
-        <p className='classTitle generalFont'>computer science</p>
-        <p className='desc generalFont'>this is the description for the class. it will mention pre-requisites and a short description of the class</p>
+        <p className='classTitle generalFont'>class name</p>
+        <p className='desc generalFont truncate'>description, pre requisites, co requisites. if there is other info put it</p>
       </div>
     </div>
   );

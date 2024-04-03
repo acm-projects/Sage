@@ -1,80 +1,90 @@
 
 
+
+
+
+
+.truncate {
+overflow: hidden;
+text-overflow: ellipsis;
+}
+
+
+
+.dropArea{
+
+background: rgb(232, 227, 232); /* Background color */
+border-radius: 15px; /* Adjust the border radius to control the roundness */
+width:425px;
+min-height: 370px;
+position:absolute;
+top:55px;
+left:20px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for depth */
+justify-content: center; /* Aligmn items at the start of the flex container */
+}
+
+
 .classes{
   
-    /* Adjust styles for the second div as needed */
-    margin-bottom: 15px ;
-    margin-left: -100px;
-    background: rgba(30, 30, 30, 0.7); /* Background color */
-    border-radius: 20px; /* Adjust the border radius to control the roundness */
-    width: 90%;
-    min-width:310px;
-    max-width:310px;
-    height: 80px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for depth */
-    position: relative; /* Ensure elements are positioned relative to their container */
-    display: flex; /* Use flexbox layout */
-    justify-content:left; /* Aligmn items at the start of the flex container */
-    flex-wrap: wrap;
-    flex-direction: column;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    
-  }
-
-  .semester {
-    /* Adjust styles for the second div as needed */
-    margin: 20px;
-    background: rgb(245, 244, 245); /* Background color */
-    border-radius: 30px; /* Adjust the border radius to control the roundness */
-    padding: 160px; /* Add padding inside the box */
-    width: 90%;
-    max-width:10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for depth */
-    position: relative; /* Ensure elements are positioned relative to their container */
-    display: flex; /* Use flexbox layout */
-    justify-content: flex-start; /* Aligmn items at the start of the flex container */
-    flex-wrap: wrap;
-    padding-bottom:230px;
-    align-items: center;
-  }
-
-  /*
-
-  /* Adjust styles for the second div as needed 
-  margin-top: 0px;
-  margin-bottom: 30px;
-  margin-right:40px;
-  background: rgb(245, 244, 245);
-  border-radius: 30px; 
-  padding: 120px 27px ; 
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
-  position: relative; 
-  display: flex; 
+  /* Adjust styles for the second div as needed */
+  margin-bottom: 15px ;
+  margin-left: 15px ;
+  background: rgba(30, 30, 30, 0.7); /* Background color */
+  border-radius: 20px; /* Adjust the border radius to control the roundness */
+  width:400px;
+  min-height: 100px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for depth */
+  position: relative; /* Ensure elements are positioned relative to their container */
+  display: flex; /* Use flexbox layout */
   flex-wrap: wrap;
+  justify-content:flex-start;
   flex-direction: column;
-  align-items:flex-start;
-  
 }
-*/
 
-.drop-area {
-  height: 20px;
-  width: 100%;
-  text-align: center;
-  background-color: burlywood;
-  display: none;
+
+.TNTtext{
+  margin-left: 9px;;
+}
+
+.TNT{
+  display: flex;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  border-radius: 3px;
+  background-color: #0AB28A;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for depth */
+
+}
+
+.TContainer {
+  position: absolute; /* Position the T container absolutely */
+  top: 7px; /* Adjust top position */
+  right: 15px; 
+}
+
+.saved{
+  display: flex;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  margin:15px 15px 0 0;
+  border-radius: 4px;
+  background-color: #0AB28A;
 }
 
 .classNum, .classTitle, .desc{
-  margin-left: 10px;
-  margin-top: 3px;
+  margin-left: 12px;
+  margin-top: 7px;
+  text-overflow: ellipsis;
   
-}
-
-.desc{
+  }
+  
+  .desc{
   font-size: 12px;
-}
-
-.classNum{
+  }
+  
+  .classNum{
   font-size: 18px;
-}
+  }

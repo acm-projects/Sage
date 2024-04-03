@@ -1,6 +1,7 @@
 import { useDrop } from "react-dnd";
 import itemTypes from "../utils/itemType";
 import Classes from "./Classes";
+import './classes.css'
 
 const BoxTarget = () => {
     
@@ -19,8 +20,8 @@ const BoxTarget = () => {
         }),
       });
     
-    return ( <div ref={drop} >
-        Drop here!
+    return ( <div ref={drop} className="dropArea" >
+        
     </div> );
 }
  
