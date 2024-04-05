@@ -4,10 +4,7 @@ import RoundedBack from './components/RoundedBackground';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Chat from './ChatPage/Chat';
 import Transcript from './Transcript/Transcript';
-import LogIn from './LogIn/LogIn';
-import LoginButton from './components/LoginButton';
-import Authsetup from './Authsetup'
-
+import Profile from './Profile/Profile';
 
 function App() {
   return (
@@ -26,8 +23,8 @@ function App() {
             <Route path ="/degreeplan">
               <Transcript />
             </Route>
-            <Route path ="/login">
-              <LogIn />
+            <Route path ="/profile-page">
+              <Profile />
             </Route>
           </Switch>
         </div>

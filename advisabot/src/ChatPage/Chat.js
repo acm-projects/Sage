@@ -9,8 +9,12 @@ const Chat = () => {
       </div>
       <div className="text-field">
         <input type="text" placeholder="  get advisabot advice..." />
+          <div className="search-container">
           <button type="submit"></button>
-          <button type="save"></button>
+          </div>
+          <div className="save-container">
+            <button type="save"></button>
+          </div>
       </div>
     </div>
   );

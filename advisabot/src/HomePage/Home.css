@@ -1,3 +1,5 @@
+
+
 h1 {
   position: absolute;
   top: 37.6%;
@@ -39,14 +41,14 @@ h1 {
   transform: translateY(-500%);
 }
 
-button {
+.search-container button {
   margin-top: 0px;
   padding-right: 6.2%;
   border: none; 
   background: none;
 }
 
-button::before {
+.search-container button::before {
   content: ''; 
   position: absolute;
   width: 20px;
@@ -57,6 +59,6 @@ button::before {
   z-index: 1;
 }
 
-button:hover::before {
+.search-container button:hover::before {
   filter: grayscale(100%) brightness(0); 
 }
