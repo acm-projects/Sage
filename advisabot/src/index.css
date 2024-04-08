@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'Offside';
-  src: url(fonts/Offside-Regular.ttf);
+  src: url('fonts/Offside-Regular.ttf');
 }
 
 @font-face{
   font-family: 'SudoVar';
-  src: url(fonts/SudoVariable.ttf);
+  src: url('fonts/SudoVariable.ttf');
 }
 
 html, body {

@@ -22,7 +22,7 @@ const Navbar = () => {
             <img src={chatImage} alt="Chat" />
               Chat
           </Link>
-          <Link to="../degreeplan" className="navbar-icon">
+          <Link to="../transcript" className="navbar-icon">
             <img src={degpImage} alt="Degree Plan" />
               Degree Plan
           </Link>

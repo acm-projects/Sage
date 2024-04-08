@@ -20,7 +20,7 @@ function App() {
             <Route path ="/chat">
               <Chat />
             </Route>
-            <Route path ="/degreeplan">
+            <Route path ="/transcript">
               <Transcript />
             </Route>
             <Route path ="/profile-page">
