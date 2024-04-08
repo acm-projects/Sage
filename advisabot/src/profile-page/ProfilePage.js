@@ -4,7 +4,6 @@ import RoundedBack from '../components/RoundedBackground'
 const ProfilePage = () => {
   return (
     <div>
-      
       <RoundedBack/>
     </div>
   )

@@ -1,4 +1,3 @@
-// DegreePlan.js
 import './style.css';
 import styled from 'styled-components'
 import Classes from '../components/Classes';
@@ -6,14 +5,12 @@ import Semester from '../components/Semester';
 import Header from '../components/Header';
 import React, { useState } from 'react';
 
+import PopUp from '../components/PopUp';
 import whiteStar from '../assets/Wstar.png';
 import emptyStar from '../assets/EmptyStar.png';
 
 import CreatableSelect from 'react-select/creatable';
 import Select from 'react-select';
-//import { DndProvider } from 'react-dnd';
-//import { HTML5Backend } from 'react-dnd-html5-backend';
-//import { render } from 'react-dom'
 
 
 const SavedIcon = styled.img`
@@ -22,33 +19,37 @@ const SavedIcon = styled.img`
   vertical-align: middle;
 `;
 
+const PopUpContainer = styled.div`
+  position: relative;
+  z-index: 999; /* Set z-index higher than other components */
+`;
 
 const ButtonContainer = styled.div`
-  display: flex; /* Ensure its children are laid out in a row */
-  justify-content: flex-start; /* Align its children to the start (left) of the container */
+  display: flex;
+  justify-content: flex-start;
   margin-left: 20px;
 `;
-const Button = styled.button`
-background-color:#0AB28A;
-color: white;
-padding: 13px 150px;
-border-radius: 20px;
-outline: none;
-cursor: pointer;
-transition: ease background-color 250ms;
-font-family: 'Sudo Var', sans-serif;
-font-size: 35px;
-letter-spacing: 3px;
-&:hover{
-  background-color: #055c47;
-}
-`
 
+const Button = styled.button`
+  background-color: #0AB28A;
+  color: white;
+  padding: 13px 150px;
+  border-radius: 20px;
+  outline: none;
+  cursor: pointer;
+  transition: ease background-color 250ms;
+  font-family: 'Sudo Var', sans-serif;
+  font-size: 35px;
+  letter-spacing: 3px;
+  &:hover {
+    background-color: #055c47;
+  }
+`;
 
 const DropdownContainer = styled.div`
   display: inline-block;
   position: relative;
-`
+`;
 
 const DropdownButton = styled.button`
   background-color: #0AB28A;
@@ -79,20 +80,16 @@ const DropdownMenu = styled.div`
   z-index: 1;
 `;
 
-
-
-
 function clickMe(){
   alert('you still need to set up the regenerate brother');
 }
 
-
-
 const DegreePlan = () => {
-
   const [isSaved, setIsSaved] = useState(false);
   const [menuVisible, setMenuVisible] = useState(false);
   const [selectedOption, setSelectedOption] = useState(null);
+  const [showPopup, setPopup] = useState(false);
+
   const toggleMenu = () => {
     setMenuVisible(!menuVisible)
   }
@@ -102,13 +99,12 @@ const DegreePlan = () => {
   }
 
   return (
-
     <div className='mainDiv'>
       <div className='content'>
         <div className='mainBox'>
           <div className='TContainer'>
             <div className='saved' onClick={toggleSaved}>
-            <SavedIcon src={isSaved ? whiteStar : emptyStar} alt="saved" className='whiteStar'/>
+              <SavedIcon onClick={() => setPopup(true)} src={isSaved ? whiteStar : emptyStar} alt="saved" className='whiteStar'/>
             </div>
           </div>
           <div className='flexContainer'>
@@ -130,22 +126,21 @@ const DegreePlan = () => {
               <Classes/>
               <Classes/>
             </div> 
-            
             <div className='flexContainer'>
               <Semester/>
               <Semester/>
               <Semester/>
               <Semester/>
             </div>
-            
-            
+            <PopUpContainer>
+              {showPopup && <PopUp onClose={() => setPopup(false)} />}
+            </PopUpContainer>
           </div>
         </div>
         <ButtonContainer>
           <Button onClick={clickMe}>regenerate</Button>
         </ButtonContainer>
       </div>
-      
     </div>
   );
 }
