@@ -114,3 +114,8 @@
 li {
   text-decoration: none;
 }
+
+.savedPlans{
+  position:absolute;
+  left:1800px;
+}

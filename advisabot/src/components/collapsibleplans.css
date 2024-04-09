@@ -1,0 +1,15 @@
+.collapsible .content {
+    padding: 6px;
+    background-color: #0AB28A;
+    position: fixed;
+    width: 14%;
+    bottom: 0;
+}
+.collapsible .header {
+    background-color: #0AB28A;
+    padding: 6px;
+    cursor: pointer;
+    position: fixed;
+    width: 14%;
+    bottom: 0;
+}

@@ -2,7 +2,7 @@ import React, {useEffect, useRef} from 'react'
 import '../global.css';
 import './popup.css'
 import {X} from 'lucide-react'
-import Collapsible from 'react-collapsed'
+
 
 
 

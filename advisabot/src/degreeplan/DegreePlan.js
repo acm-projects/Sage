@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import Classes from '../components/Classes';
 import Semester from '../components/Semester';
 import Header from '../components/Header';
+import CollapsiblePlans from '../components/CollapsiblePlans';
 import React, { useState } from 'react';
 
 import PopUp from '../components/PopUp';
@@ -140,7 +141,12 @@ const DegreePlan = () => {
         <ButtonContainer>
           <Button onClick={clickMe}>regenerate</Button>
         </ButtonContainer>
+        <div className='savedPlans'>
+            <CollapsiblePlans/>
+        </div>
       </div>
+      
+      
     </div>
   );
 }
