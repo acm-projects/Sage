@@ -116,6 +116,5 @@ li {
 }
 
 .savedPlans{
-  position:absolute;
-  left:1800px;
+  position:fixed;
 }

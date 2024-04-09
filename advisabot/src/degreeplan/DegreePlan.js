@@ -141,7 +141,7 @@ const DegreePlan = () => {
         <ButtonContainer>
           <Button onClick={clickMe}>regenerate</Button>
         </ButtonContainer>
-        <div className='savedPlans'>
+        <div className='savedPlans' style={{ position: 'fixed', left: '800px'}}>
             <CollapsiblePlans/>
         </div>
       </div>
