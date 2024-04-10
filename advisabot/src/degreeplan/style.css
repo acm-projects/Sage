@@ -3,7 +3,7 @@
 .mainDiv {
     background: rgba(46, 31, 49, 0.7); /* 70% transparency */
     display: flex;
-    flex-direction: column;
+    flex-direction:column;
      /* Ensure the div fills the viewport height */
     margin: 0;
     overflow-y: auto; /* Enable vertical scrolling */
@@ -113,8 +113,4 @@
 /* Text link styles */
 li {
   text-decoration: none;
-}
-
-.savedPlans{
-  position:fixed;
 }

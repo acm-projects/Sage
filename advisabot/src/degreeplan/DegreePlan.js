@@ -4,6 +4,9 @@ import Classes from '../components/Classes';
 import Semester from '../components/Semester';
 import Header from '../components/Header';
 import CollapsiblePlans from '../components/CollapsiblePlans';
+import QuickChat from '../components/QuickChat';
+
+
 import React, { useState } from 'react';
 
 import PopUp from '../components/PopUp';
@@ -15,9 +18,10 @@ import Select from 'react-select';
 
 
 const SavedIcon = styled.img`
+  display: block; /* Ensure the image is displayed as a block element */
+  margin: 0 auto; /* Center the image horizontally */
   width: 40px; 
-  height: auto; 
-  vertical-align: middle;
+  height: auto;
 `;
 
 const PopUpContainer = styled.div`
@@ -141,9 +145,13 @@ const DegreePlan = () => {
         <ButtonContainer>
           <Button onClick={clickMe}>regenerate</Button>
         </ButtonContainer>
-        <div className='savedPlans' style={{ position: 'fixed', left: '800px'}}>
-            <CollapsiblePlans/>
+        <div className='footerPopUp' style={{display: 'flex', justifyContent: 'flex-end', marginRight:'175px'}}>
+          <CollapsiblePlans/>
+          <QuickChat/>
         </div>
+        
+        
+        
       </div>
       
       
