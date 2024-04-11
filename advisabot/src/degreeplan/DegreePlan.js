@@ -92,24 +92,67 @@ function clickMe(){
 const DegreePlan = () => {
   const [isSaved, setIsSaved] = useState(false);
   const [menuVisible, setMenuVisible] = useState(false);
-  const [selectedOption, setSelectedOption] = useState(null);
-  const [showPopup, setPopup] = useState(false);
+  const [shouldShowPopup, setShouldShowPopup] = useState(false);
+  const [popupClosedByX, setPopupClosedByX] = useState(false); // New state variable
+  const [popupSubmitted, setPopupSubmitted] = useState(false);
+  const [setStar, setStarImage] = useState(emptyStar);
 
   const toggleMenu = () => {
-    setMenuVisible(!menuVisible)
-  }
+    setMenuVisible(!menuVisible);
+  };
+
+
+  //when clicked --> if notSAved (empty star), pull up popup
+  //when popup comes up: 
+  //1. if submitted --> isSaved is true, star becomes filled, popup closes
+  //2. if closedByX --> isSaved is false, star becomes empty, popup closes
 
   const toggleSaved = () => {
     setIsSaved(!isSaved);
-  }
+    
 
+
+
+    if (isSaved === false) {
+      // Show the popup only if the star is the empty star
+      setShouldShowPopup(true);
+
+      //if closedbyX
+      if(popupClosedByX === true){
+        setIsSaved(false);
+        setPopupClosedByX(true); 
+        setShouldShowPopup(false);
+      }
+      //if submitted
+      if(popupSubmitted === true){
+        setIsSaved(true);
+        popupSubmitted(true);
+        setShouldShowPopup(false);
+      }
+    }
+    
+    
+  };
+
+  const closePopup = () => {
+    setShouldShowPopup(false);
+    setPopupClosedByX(true); // Set to true when the popup is closed by clicking X
+  };
+
+  const submitPopup = () => {
+    setIsSaved(true); // Set the star to be filled
+    setShouldShowPopup(false); // Close the popup
+    setPopupSubmitted(true);
+  };
+  
   return (
     <div className='mainDiv'>
       <div className='content'>
         <div className='mainBox'>
           <div className='TContainer'>
             <div className='saved' onClick={toggleSaved}>
-              <SavedIcon onClick={() => setPopup(true)} src={isSaved ? whiteStar : emptyStar} alt="saved" className='whiteStar'/>
+              <SavedIcon onClick={() => { if (!isSaved) setShouldShowPopup(true); }} src={ (isSaved) ? whiteStar : emptyStar}
+              alt="saved" className='whiteStar' />
             </div>
           </div>
           <div className='flexContainer'>
@@ -137,8 +180,9 @@ const DegreePlan = () => {
               <Semester/>
               <Semester/>
             </div>
+            
             <PopUpContainer>
-              {showPopup && <PopUp onClose={() => setPopup(false)} />}
+              {shouldShowPopup && <PopUp onClose={closePopup} onSubmit={submitPopup} />}
             </PopUpContainer>
           </div>
         </div>
@@ -149,12 +193,7 @@ const DegreePlan = () => {
           <CollapsiblePlans/>
           <QuickChat/>
         </div>
-        
-        
-        
       </div>
-      
-      
     </div>
   );
 }

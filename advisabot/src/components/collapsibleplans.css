@@ -33,7 +33,7 @@
 .savedPlanButton{
 
     width:250px;
-    height:50px;
+    height:40px;
     background-color: #0AB28A;
     border-radius: 5px 5px 0 0;
     cursor: pointer;
@@ -41,8 +41,8 @@
 
 .quickChatButton{
 
-    width:300px;
-    height:50px;
+    width:310px;
+    height:40px;
     background-color: #6962AD;
     border-radius: 5px 5px 0 0;
     cursor: pointer;
@@ -78,14 +78,35 @@
 }
 
 .whiteStar {
-    width: 40px; /* Set the desired width */
+    width: 35px; /* Set the desired width */
     height: auto; /* Maintain aspect ratio */
     margin-left: -25px;
     
   }
 
   .whiteChat{
-    width: 40px; /* Set the desired width */
+    width: 35px; /* Set the desired width */
     height: auto; /* Maintain aspect ratio */
     margin-left: -15px;
+  }
+
+  .purpleSend{
+    width:35px;
+    height: 20px;
+    height: auto; /* Maintain aspect ratio */
+    margin-left: -30px;
+  }
+
+  .chatScreen{
+    background:#2E1F31;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+    margin-bottom: 0;
+    overflow-y: auto;
+  }
+
+  .savedCardContainer {
+    display: flex;
+    flex-direction: column;
   }
