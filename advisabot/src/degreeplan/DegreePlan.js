@@ -95,7 +95,7 @@ const DegreePlan = () => {
   const [shouldShowPopup, setShouldShowPopup] = useState(false);
   const [popupClosedByX, setPopupClosedByX] = useState(false); // New state variable
   const [popupSubmitted, setPopupSubmitted] = useState(false);
-  const [setStar, setStarImage] = useState(emptyStar);
+  //const [setStar, setStarImage] = useState(emptyStar);
 
   const toggleMenu = () => {
     setMenuVisible(!menuVisible);
@@ -108,14 +108,12 @@ const DegreePlan = () => {
   //2. if closedByX --> isSaved is false, star becomes empty, popup closes
 
   const toggleSaved = () => {
-    setIsSaved(!isSaved);
     
-
-
-
+    
     if (isSaved === false) {
       // Show the popup only if the star is the empty star
       setShouldShowPopup(true);
+      setIsSaved(!isSaved);
 
       //if closedbyX
       if(popupClosedByX === true){
@@ -129,6 +127,10 @@ const DegreePlan = () => {
         popupSubmitted(true);
         setShouldShowPopup(false);
       }
+    }
+
+    else{
+      setIsSaved(!isSaved);
     }
     
     
