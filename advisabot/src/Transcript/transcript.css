@@ -1,7 +1,17 @@
+@font-face {
+    font-family: 'Offside';
+    src: url('../fonts/Offside-Regular.ttf');
+  }
+  
+  @font-face{
+    font-family: 'SudoVar';
+    src: url('../fonts/SudoVariable.ttf');
+  }
+
 body {
     display: flex;
     justify-content: center;
-    font-family: 'Offside';
+    font-family: 'SudoVar';
     flex-direction: column;
 }
 
@@ -13,15 +23,15 @@ h3 {
     font-weight: 200;
     position: relative; /* Change absolute to relative */
     margin-top: 170px;
-    font-family: 'SudoVar';
+    font-family: 'Offside';
 }
       
 h2 {
     color: white;
-    font-size: 18px; /* Adjust the font size as needed */
+    font-size: 19px; /* Adjust the font size as needed */
     text-align: center;
     position: relative;
-    font-weight: 200;
+    font-weight: 100;
     margin-top: 35px;
     transform: translateY(-40%);
 }
@@ -35,7 +45,7 @@ h2 {
 }
 
 .symbol{
-    margin-top: 40px;
+    margin-top: 50px;
     margin-left: 50%;
     transform: translate(-50%, -50%);
     background-color: #2E1F31;
@@ -51,7 +61,7 @@ h2 {
 button {
     background: none;
     color: white;
-    font-family: 'Offside';
+    font-family: 'SudoVar';
     font-size: 30px;
     border: none; /* Remove border */
     cursor: pointer;

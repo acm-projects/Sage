@@ -20,11 +20,11 @@ const Navbar = () => {
         <div className="navbar-links">
           <Link to="../chat" className="navbar-icon">
             <img src={chatImage} alt="Chat" />
-              Chat
+              chat
           </Link>
           <Link to="../transcript" className="navbar-icon">
             <img src={degpImage} alt="Degree Plan" />
-              Degree Plan
+              degree plan
           </Link>
           {isAuthenticated ? (
             <Link to="../profile-page" className="navbar-icon">

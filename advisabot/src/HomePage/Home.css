@@ -1,4 +1,12 @@
+@font-face {
+  font-family: 'Offside';
+  src: url('../fonts/Offside-Regular.ttf');
+}
 
+@font-face{
+  font-family: 'SudoVar';
+  src: url('../fonts/SudoVariable.ttf');
+}
 
 h1 {
   position: absolute;

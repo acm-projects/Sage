@@ -1,3 +1,12 @@
+@font-face {
+  font-family: 'Offside';
+  src: url('../fonts/Offside-Regular.ttf');
+}
+
+@font-face{
+  font-family: 'SudoVar';
+  src: url('../fonts/SudoVariable.ttf');
+}
 /* Your existing CSS */
 .header-container {
   box-sizing: border-box;
@@ -21,7 +30,7 @@
   justify-content: space-between;
   align-items: center;
   margin-top: 30px;
-  font-family: "Offside", sans-serif;
+  font-family: 'SudoVar';
 }
 
 .navbar-logo {
@@ -40,7 +49,8 @@
 .navbar-icon {
   display: flex;
   align-items: center;
-  font-size: 16px;
+  font-size: 18px;
+  font-weight: 100;
   margin-right: 45px; /* Increase spacing between icons */
   text-decoration: none;
   color: #fff;
@@ -56,7 +66,7 @@
 .login-button {
   border: none; /* Remove border */
   font-size: 21px;
-  margin-right: 20px;
+  margin-right: 35px;
   font-family: 'SudoVar';
   cursor: pointer;
 }

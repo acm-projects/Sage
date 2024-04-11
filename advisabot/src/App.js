@@ -10,8 +10,6 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <RoundedBack />
-        <Navbar />
         <div className = "Content">
           <Switch>
             <Route exact path  ="/">

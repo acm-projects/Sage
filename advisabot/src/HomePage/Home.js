@@ -1,6 +1,8 @@
 import React, { useEffect, useRef } from 'react';
 import './Home.css';
 import { Link } from 'react-router-dom';
+import Navbar from '../components/Navbar';
+import RoundedBack from '../components/RoundedBackground';
 
 const Home = () => {
   const searchContainerRef = useRef(null);
@@ -23,6 +25,8 @@ const Home = () => {
 
   return (
     <div>
+        <Navbar />
+        <RoundedBack />
       <h1>advisabot</h1>
       <div className="search-container" ref={searchContainerRef}>
         <input type="text" placeholder="  get advisabot advice..." />
