@@ -153,7 +153,7 @@ const DegreePlan = () => {
         <div className='mainBox'>
           <div className='TContainer'>
             <div className='saved' onClick={toggleSaved}>
-              <SavedIcon onClick={() => { if (!isSaved) setShouldShowPopup(true); }} src={ (isSaved) ? whiteStar : emptyStar}
+              <SavedIcon onClick={() => { if (isSaved === false ) setShouldShowPopup(true); }} src={ (isSaved) ? whiteStar : emptyStar}
               alt="saved" className='whiteStar' />
             </div>
           </div>
