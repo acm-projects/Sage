@@ -18,16 +18,15 @@ const CollapsiblePlans = () => {
 
     return (
         <div>
-            <div className='accordion' style={{marginRight:'40px'}}>
-                <div className='item' style ={{position:'fixed', bottom: '0px', }}>
+            <div className='accordion' style={{ marginRight: '40px' }}>
+                <div className='item' style={{ position: 'fixed', bottom: '-20px', }}>
 
                     <div className='savedPlanButton generalFont' onClick={toggleCollapse}>
-                        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%',  }}>
-                            <p style={{ fontSize: '30px', textAlign: 'center', letterSpacing: '3px'}}>
-                               
-                                <img src={whiteStar} alt="whiteStar" className="whiteStar" /> plans
-                                
-                            </p>
+                        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%' }}>
+                            
+                                <img src={whiteStar} alt="whiteStar" className="whiteStar" style={{ marginRight: '5px', marginBottom: '15px', marginRight:'5px'}} />
+                                <p style={{fontSize: '28px', textAlign: 'center', letterSpacing: '2px', margin: '0', marginLeft: '10px'}}>plans</p>  
+                            
                         </div>
                     </div>
 

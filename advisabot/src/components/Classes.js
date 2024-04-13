@@ -1,6 +1,6 @@
 import '../global.css';
 import './classes.css';
-import React from 'react';
+import {useState} from 'react';
 
 import itemTypes from '../utils/itemType';
 import { useDrag } from 'react-dnd';
@@ -15,6 +15,24 @@ const Classes = () => {
       isDragging: !!monitor.isDragging(),
     }),
   });
+
+  const [taken, setTaken] = useState(false);
+
+  //to update based on taken or not
+  //if taken, change it to T, and class color should be grey
+  //if not taken, change to NT, and class color should be purple
+  const checkTaken = () => {
+    if(taken === false){
+      setTaken(true);
+      return 'T';
+      
+    }
+
+    else{
+      setTaken(false);
+      return 'NT';
+    }
+  };
   
   return (
     <div>

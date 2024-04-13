@@ -1,5 +1,5 @@
 import '../global.css';
-import './header.css';
+import './dpnav.css';
 
 import chatImage from '../assets/Wchat.png';
 import degpImage from '../assets/Wdegp.png';
@@ -10,6 +10,7 @@ import PdegpImage from '../assets/Pdegp.png';
 import PprofImage from '../assets/Pprof.png';
 
 import { Link } from 'react-router-dom';
+import { AlignCenter } from 'lucide-react';
 
 const Header = () => {
   const handleMouseEnter = (event) => {
@@ -46,16 +47,16 @@ const Header = () => {
   };
 
   return (
-    <div className="header-container">
-      <nav className="navbar">
-        <Link to="../chatpage" className="larger-text alternateFont">
+    <div > 
+      <nav className="navbar" >
+        <Link to="../" className="larger-text alternateFont advisabot" >
           advisabot.
         </Link>
         <div>
           <ul id="navbar">
             <li className="chat-link">
               <Link
-                to="../chatpage"
+                to="../chat"
                 className="generalFont chat-link"
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}

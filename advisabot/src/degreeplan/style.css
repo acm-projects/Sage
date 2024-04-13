@@ -13,7 +13,7 @@
   .content {
     flex: 1; /* Make the content div expand to fill the remaining space */
     padding: 20px; /* Add padding to the content */
-    margin-bottom: 130px;
+    margin-top:0;
     overflow-y: scroll;
   }
   
@@ -25,12 +25,13 @@
     border-radius: 30px;
     padding: 40px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin: 20px;
+    margin: 40px;
     margin-bottom: 30px;
     display: flex;
     justify-content: space-between; /* Align items at the start of the flex container */
     flex-wrap: wrap; /* Allow items to wrap to the next line if necessary */
     overflow-y: auto;
+    
     
   }
 
@@ -45,7 +46,7 @@
   border-radius: 30px; /* Adjust the border radius to control the roundness */
   min-width: 450px;
   height:500px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for depth */
+  box-shadow: 0 0 10px rgba(24, 23, 23, 0.8); /* Add a subtle box shadow for depth */
   position: relative; /* Ensure elements are positioned relative to their container */
   display: flex; /* Use flexbox layout */
   flex-direction: column;
@@ -71,7 +72,7 @@
   justify-content: flex-start;
   overflow-y: auto; /* Enable vertical scrolling */
   padding: 160px; /* This padding can be adjusted as needed */
-  padding-bottom: 230px; /* This padding can be adjusted as needed */
+  padding-bottom: 250px; /* This padding can be adjusted as needed */
   min-width: 150px; /* Set a minimum width if necessary */
   width: 90%; /* Set the desired width */
   max-width: 10px; /* Adjust the maximum width as needed */

@@ -1,0 +1,68 @@
+@font-face {
+    font-family: 'Offside';
+    src: url('../fonts/Offside-Regular.ttf');
+  }
+  
+  @font-face{
+    font-family: 'SudoVar';
+    src: url('../fonts/SudoVariable.ttf');
+  }
+
+body {
+    display: flex;
+    justify-content: center;
+    font-family: 'SudoVar';
+    flex-direction: column;
+}
+
+h3 {
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: 200;
+    position: relative; /* Change absolute to relative */
+    margin-top: 170px;
+    font-family: 'Offside';
+}
+      
+h2 {
+    color: white;
+    font-size: 19px; /* Adjust the font size as needed */
+    text-align: center;
+    position: relative;
+    font-weight: 100;
+    margin-top: 35px;
+    transform: translateY(-40%);
+}
+
+.transcriptimage {
+    margin-top: 100px;
+    width: min(20vw, 225px);
+    display: block;
+    margin: 0px auto;
+    position: relative;
+}
+
+.symbol{
+    margin-top: 50px;
+    margin-left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #2E1F31;
+    opacity: 0.7;
+    height: 45px;
+    width: min(40vw, 350px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 15px;
+}
+button {
+    background: none;
+    color: white;
+    font-family: 'SudoVar';
+    font-size: 30px;
+    border: none; /* Remove border */
+    cursor: pointer;
+}

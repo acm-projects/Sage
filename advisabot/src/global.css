@@ -3,10 +3,8 @@
 
 @font-face {
   font-family: 'Offside';
-  src: url('font/Offside-Regular.ttf');
+  src: url('fonts/Offside-Regular.ttf');
 }
-
-
 
 html, body{
   height:100%;
@@ -26,21 +24,10 @@ html, body{
 }
 
 .alternateFont, h1{
-  font-size: 100%;
   font-family: 'Offside', sans-serif;   
   color: white;
   align-items: center;
   justify-content: center;
-  
-
-}
-
-* {
-  --primary-color: #2E1F31;
-  --secondary-color: #007bff;
-  --accent-color: #17a2b8;
-  --success-color: #28a745;
-  --warning-color: #ffc107;
 }
 
 .content-box {

@@ -33,7 +33,7 @@
 .savedPlanButton{
 
     width:250px;
-    height:40px;
+    height:43px;
     background-color: #0AB28A;
     border-radius: 5px 5px 0 0;
     cursor: pointer;
@@ -42,10 +42,11 @@
 .quickChatButton{
 
     width:310px;
-    height:40px;
+    height:43px;
     background-color: #6962AD;
     border-radius: 5px 5px 0 0;
     cursor: pointer;
+
 }
 
 .item {
@@ -81,6 +82,7 @@
     width: 35px; /* Set the desired width */
     height: auto; /* Maintain aspect ratio */
     margin-left: -25px;
+    vertical-align: center;
     
   }
 
@@ -95,6 +97,7 @@
     height: 20px;
     height: auto; /* Maintain aspect ratio */
     margin-left: -30px;
+    margin-bottom: 20px;
   }
 
   .chatScreen{

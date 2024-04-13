@@ -13,8 +13,10 @@ const Semester = () => {
 
   return (
     <div className='semester'>
+      <div className='semseter-header-container'>
+        <p className='semesterHeader generalFont'>sem 20XX</p>
+      </div>
       
-      <p className='semesterHeader generalFont'>sem 20XX</p>
       <BoxTarget/>
     </div>
   );

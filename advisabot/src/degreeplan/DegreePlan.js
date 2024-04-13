@@ -2,10 +2,9 @@ import './style.css';
 import styled from 'styled-components'
 import Classes from '../components/Classes';
 import Semester from '../components/Semester';
-import Header from '../components/Header';
+import Header from '../components/DPNav';
 import CollapsiblePlans from '../components/CollapsiblePlans';
 import QuickChat from '../components/QuickChat';
-
 
 import React, { useState } from 'react';
 
@@ -32,7 +31,8 @@ const PopUpContainer = styled.div`
 const ButtonContainer = styled.div`
   display: flex;
   justify-content: flex-start;
-  margin-left: 20px;
+  margin-top: -10px;
+  margin-left: 40px;
 `;
 
 const Button = styled.button`
@@ -59,7 +59,7 @@ const DropdownContainer = styled.div`
 const DropdownButton = styled.button`
   background-color: #0AB28A;
   color: white;
-  padding: 8px 10px;
+  padding: 12px 10px;
   border-radius: 10px;
   outline: none;
   cursor: pointer;
@@ -67,8 +67,7 @@ const DropdownButton = styled.button`
   font-family: 'Sudo Var', sans-serif;
   font-size: 12px;
   margin-left: 15px;
-  margin-bottom: 25px;
-  margin-top: -5px;
+  margin-top: -20px;
   letter-spacing: 3px;
   &:hover {
     background-color: #055c47;
@@ -148,55 +147,60 @@ const DegreePlan = () => {
   };
   
   return (
-    <div className='mainDiv'>
-      <div className='content'>
-        <div className='mainBox'>
-          <div className='TContainer'>
-            <div className='saved' onClick={toggleSaved}>
-              <SavedIcon onClick={() => { if (isSaved === false ) setShouldShowPopup(true); }} src={ (isSaved) ? whiteStar : emptyStar}
-              alt="saved" className='whiteStar' />
+    
+      <div className='mainDiv'>
+      
+        <div className='content'>
+          
+          <div className='mainBox'>
+              
+            <div className='TContainer'>
+              <div className='saved' onClick={toggleSaved}>
+                <SavedIcon onClick={() => { if (isSaved === false ) setShouldShowPopup(true); }} src={ (isSaved) ? whiteStar : emptyStar}
+                alt="saved" className='whiteStar' />
+              </div>
             </div>
-          </div>
-          <div className='flexContainer'>
-            <div className='allClasses'>
-              <p className=' specialHeader generalFont '>all classes</p>
-              <DropdownContainer>
-                <DropdownButton onClick={toggleMenu}>filter results</DropdownButton>
-                {menuVisible && (
-                  <DropdownMenu visible={menuVisible}>
-                    <ul>
-                      <li>taken</li>
-                      <li>not taken</li>
-                    </ul>
-                  </DropdownMenu>
-                )}
-              </DropdownContainer>
-              <Classes/>
-              <Classes/>
-              <Classes/>
-              <Classes/>
-            </div> 
             <div className='flexContainer'>
-              <Semester/>
-              <Semester/>
-              <Semester/>
-              <Semester/>
+              <div className='allClasses'>
+                <p className=' specialHeader generalFont '>all classes</p>
+                <DropdownContainer>
+                  <DropdownButton onClick={toggleMenu}>filter results</DropdownButton>
+                  {menuVisible && (
+                    <DropdownMenu visible={menuVisible}>
+                      <ul>
+                        <li>taken</li>
+                        <li>not taken</li>
+                      </ul>
+                    </DropdownMenu>
+                  )}
+                </DropdownContainer>
+                <Classes/>
+                <Classes/>
+                <Classes/>
+                <Classes/>
+              </div> 
+              <div className='flexContainer'>
+                <Semester/>
+                <Semester/>
+                <Semester/>
+                <Semester/>
+              </div>
+              
+              <PopUpContainer>
+                {shouldShowPopup && <PopUp onClose={closePopup} onSubmit={submitPopup} />}
+              </PopUpContainer>
             </div>
-            
-            <PopUpContainer>
-              {shouldShowPopup && <PopUp onClose={closePopup} onSubmit={submitPopup} />}
-            </PopUpContainer>
           </div>
-        </div>
-        <ButtonContainer>
-          <Button onClick={clickMe}>regenerate</Button>
-        </ButtonContainer>
-        <div className='footerPopUp' style={{display: 'flex', justifyContent: 'flex-end', marginRight:'175px'}}>
-          <CollapsiblePlans/>
-          <QuickChat/>
+          <ButtonContainer>
+            <Button onClick={clickMe}>regenerate</Button>
+          </ButtonContainer>
+          <div className='footerPopUp' style={{display: 'flex', justifyContent: 'flex-end', marginRight:'175px'}}>
+            <CollapsiblePlans/>
+            <QuickChat/>
+          </div>
+          <div style={{maxHeight:'100px'}}></div>
         </div>
       </div>
-    </div>
   );
 }
 

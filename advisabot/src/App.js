@@ -1,32 +1,45 @@
-import { Route, Routes } from 'react-router-dom';
-import Header from './components/Header';
-import DegreePlan from './degreeplan/DegreePlan';
-import ProfilePage from './profile-page/ProfilePage';
-import ChatPage from './chatpage/ChatPage';
-import RoundedBack from './components/RoundedBackground';
-import './global.css';
 
+import Home from './HomePage/Home';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Chat from './chatpage/Chat';
+import Transcript from './Transcript/Transcript';
+import Profile from './Profile/Profile';
+import DegreePlan from './degreeplan/DegreePlan';
+import Header from './components/DPNav';
+
+import './global.css';
 import { DndProvider } from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend';
 import { render } from 'react-dom'
-import { ChakraBaseProvider } from '@chakra-ui/react';
 
 function App() {
-
   return (
-    <DndProvider backend={HTML5Backend}>
-      <div>
-        <Header/>
-        <Routes>
-            <Route path='/degreeplan' element={<DegreePlan/>}/>
-            <Route path='/profile-page' element={<ProfilePage/>}/>
-            <Route path='/chatpage' element={<ChatPage/>}/>
-            <Route path='/chatpage' element={<ChatPage/>}/>
-          </Routes>
-      </div>
-    </DndProvider>
-    
-    
+    <Router>
+      <DndProvider backend={HTML5Backend}>
+        <div className="App">
+          <div className = "Content">
+            <Switch>
+              <Route exact path  ="/">
+                <Home />
+              </Route>
+              <Route path ="/chat">
+                <Chat />
+              </Route>
+              <Route path ="/transcript">
+                <Transcript />
+              </Route>
+              <Route path ="/profile-page">
+                <Profile />
+              </Route>
+              <Route path ="/degreeplan">
+                <Header/>
+                <DegreePlan />
+              </Route>
+            </Switch>
+          </div>
+        </div>
+      </DndProvider>
+    </Router>
   )
 }
 
