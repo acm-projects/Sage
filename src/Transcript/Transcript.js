@@ -1,57 +1,64 @@
 import React, { useState } from 'react';
 import './transcript.css';
-import imgUpload from '../assets/upload-svgrepo-com.png'
+import imgUpload from '../assets/upload-svgrepo-com.png';
 import Navbar from '../components/RoundedNavbar';
 import RoundedBack from '../components/RoundedBackground';
 import putS3 from "../textract/putS3.js";
 import startDetection from '../textract/textract.js';
 import { useAuth0 } from '@auth0/auth0-react';
+import { useHistory } from 'react-router-dom';
 
-
-// Transcript.js should only ever be reached if the user is authenticated, so that doesn't need to be checked here
 const Transcript = () => {
-  const {user} = useAuth0();
+  const { user } = useAuth0();
   const [file, setFile] = useState(null);
+  const [fileName, setFileName] = useState("");
+  const [loading, setLoading] = useState(false);
+  const history = useHistory(); // Import useHistory hook 
+
   const handleFileChange = (e) => {
     if (e.target.files && e.target.files.length > 0) {
-      setFile(e.target.files[0]);
+      const selectedFile = e.target.files[0];
+      setFile(selectedFile);
+      setFileName(selectedFile.name);
     }
   };
+
   const handleUpload = async () => {
     if (file) {
+      setLoading(true);
       console.log("Uploading file...");
       const formData = new FormData();
       formData.append("file", file);
-
-      // If this code is uncommented and the rest of the function is unchanged, it succesfully puts
-      // the thing into s3
       await putS3(file);
-      // The following code also worked on its own
       await startDetection(file.name, user.sub.substring(14));
-      
-      
-      console.log("Calling file here");
+      setLoading(false);
+      console.log("FInished Upload");
+      history.push("../degreeplan"); // Navigate to "../degreeplan" after upload
     }
   };
+
   return (
     <div className='upload'>
       <RoundedBack />
       <Navbar />
       <div className='text'>
         <h3>upload transcript</h3>
-        <h2>drag and drop or upload your transcript <br /> to create your degree plan</h2>
+        <h2>Choose a file then select upload file <br /> to create your degree plan</h2>
         <div className='img'>
           <img src={imgUpload} alt="imgupload" className='transcriptimage' />
         </div>
       </div>
-      <div>
-        <label htmlFor="file" className="sr-only">
-          Choose a file
-        </label>
-        <input id="file" type="file" onChange={(e) => handleFileChange(e)} />
+      <div className="button-container">
+        <label htmlFor="file" className="custom-button">Choose File</label>
+        <div className="divider"></div>
+        <input id="file" type="file" className="file-input" onChange={(e) => handleFileChange(e)} />
+        <button onClick={handleUpload} className="upload-button" disabled={!file || loading}>Upload File</button>
       </div>
-      {file && <button onClick={handleUpload}>Upload a file</button>}
+      <div className="file-name-container">
+      {loading ? <p className="loading-text">Loading...</p> : (fileName && <p className="file-name">{fileName}</p>)}
+      </div>
     </div>
   );
 };
+
 export default Transcript;

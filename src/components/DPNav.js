@@ -1,16 +1,21 @@
 import '../global.css';
 import './dpnav.css';
 
+
 import chatImage from '../assets/Wchat.png';
 import degpImage from '../assets/Wdegp.png';
 import profImage from '../assets/Wprof.png';
 
+
 import PchatImage from '../assets/Pchat.png';
 import PdegpImage from '../assets/Pdegp.png';
 import PprofImage from '../assets/Pprof.png';
+import FloralLogo from '../assets/FloralLogo.png';
+
 
 import { Link } from 'react-router-dom';
 import { AlignCenter } from 'lucide-react';
+
 
 const Header = () => {
   const handleMouseEnter = (event) => {
@@ -24,11 +29,15 @@ const Header = () => {
       case 'profileWhite':
         event.target.src = PprofImage;
         break;
+      case 'logo':
+        event.target.src = FloralLogo;
       default:
         break;
     }
 
+
   };
+
 
   const handleMouseLeave = (event) => {
     switch (event.target.alt) {
@@ -46,14 +55,15 @@ const Header = () => {
     }
   };
 
+
   return (
-    <div > 
-      <nav className="navbar" >
-        <Link to="../" className="larger-text alternateFont advisabot" >
-          advisabot.
-        </Link>
+    <div className = "dp-header"> 
+      <nav className="dp-navbar" >
+      <Link to="../" className="floral-logo">
+            <img src={FloralLogo} alt="Logo" />
+          </Link>
         <div>
-          <ul id="navbar">
+          <ul id="dp-navbar">
             <li className="chat-link">
               <Link
                 to="../chat"
@@ -92,5 +102,6 @@ const Header = () => {
     </div>
   );
 };
+
 
 export default Header;

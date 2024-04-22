@@ -7,6 +7,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 import chatImage from '../assets/Wchat.png';
 import degpImage from '../assets/Wdegp.png';
 import profImage from '../assets/Wprof.png';
+import FloralLogo from '../assets/FloralLogo.png';
 
 const RoundedNavbar = () => {
   const { isAuthenticated } = useAuth0();
@@ -14,9 +15,9 @@ const RoundedNavbar = () => {
   return (
     <div className="header-container">
       <nav className="navbar">
-        <Link to="../" className="navbar-logo">
-          advisabot.
-        </Link>
+          <Link to="../" className="navbar-logo">
+            <img src={FloralLogo} alt="Logo" />
+          </Link>
         <div className="navbar-links">
           <Link to="../chat" className="navbar-icon">
             <img src={chatImage} alt="Chat" />

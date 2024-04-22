@@ -1,13 +1,14 @@
 /* Navbar.css */
 
+
 .header-container {
   box-sizing: border-box;
-  background-color: #2E1F31;
+  background-color: rgba(48, 77, 65, 0.36); /* 36% opacity */
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   opacity: 0.7;
   justify-content: center;
   border-radius: 30px 30px 0px 0px;
-  color: black; 
+  color: black;
   text-align: center;
   width: 93.5vw;
   height: 11.6vh;
@@ -18,25 +19,16 @@
 }
 
 
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 30px;
-  font-family: "Offside", sans-serif;
+
+.navbar-logo img {
+  width: 50px; /* Adjust the width as needed */
 }
 
-.navbar-logo {
-  color: #fff;
-  text-decoration: none;
-  font-size: 25px;
-  font-weight: 100;
-  padding-left: 35px;
-}
 
 .navbar-links {
   display: flex;
 }
+
 
 .navbar-icon {
   display: flex;
@@ -47,15 +39,26 @@
   color: #fff;
 }
 
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'SudoVar';
+  margin-top: 18.5px;
+}
+
+
 .navbar-icon img {
-  width: 30px; /* Adjust icon size as needed */
+  width: 35px; /* Adjust icon size as needed */
   margin-bottom: 0px; /* Adjust space between icon and text as needed */
 }
+
 
 @font-face {
   font-family: 'Offside';
   src: url('../fonts/Offside-Regular.ttf');
 }
+
 
 @font-face{
   font-family: 'SudoVar';
@@ -64,12 +67,12 @@
 /* Your existing CSS */
 .header-container {
   box-sizing: border-box;
-  background-color: #2E1F31;
+  background-color: rgba(48, 77, 65, 0.36);;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   opacity: 0.7;
   justify-content: center;
   border-radius: 30px 30px 0px 0px;
-  color: black; 
+  color: black;
   text-align: center;
   width: 93.5vw;
   height: 11.6vh;
@@ -77,15 +80,9 @@
   top: 9.3644%;
   left: 50%;
   transform: translate(-50%, -50%);
+  
 }
 
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 30px;
-  font-family: 'SudoVar';
-}
 
 .navbar-logo {
   font-family: 'Offside';
@@ -93,11 +90,21 @@
   text-decoration: none;
   font-size: 25px;
   font-weight: 100;
-  padding-left: 35px;
+  padding-left: 25px;
 }
 
 .navbar-links {
   display: flex;
+}
+
+.navbar-icon:hover,
+.navbar-logo:hover {
+  color: silver;
+}
+
+.navbar-icon:hover img,
+.navbar-logo:hover img {
+  filter: brightness(100%);
 }
 
 .navbar-icon {
@@ -111,10 +118,12 @@
   font-family: 'SudoVar';
 }
 
+
 .navbar-icon img {
   width: 30px; /* Adjust icon size as needed */
   margin-right: 3px; /* Adjust space between icon and text as needed */
 }
+
 
 /* Add this CSS to remove border from the login button */
 .login-button {
@@ -124,3 +133,5 @@
   font-family: 'SudoVar';
   cursor: pointer;
 }
+
+

@@ -5,13 +5,21 @@
 }
 
 /* Reset default styles */
-* {
+/* Targeting specific elements */
+.dp-header,
+.dp-header * {
   margin-top: 20px;
   padding: 0;
 }
 
+.floral-logo img {
+  margin-top: 50px;
+  margin-left: 10px;
+  width: 50px; /* Adjust the width as needed */
+}
+
 /* Main navigation styling */
-nav {
+.dp-navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -20,38 +28,39 @@ nav {
 }
 
 /* Navbar list styles */
-#navbar {
+#dp-navbar {
   display: flex;
   align-items: center;
   justify-content: center;
   position: 'fixed';
   top:'0';
   left: '0';
-  zIndex: '999999';
+  z-index: '999999';
 }
 
-#navbar li {
+#dp-navbar li {
   list-style: none;
   padding: 0 20px;
   position: relative;
 }
 
 /* Navbar link styles */
-#navbar li a {
+#dp-navbar li a {
   text-decoration: none;
   font-size: 1.3rem;
+  color: white;
   transition: color 0.3s ease-in-out;
 }
 
 /* Change link color on hover */
-#navbar li a:hover {
+#dp-navbar li a:hover {
   color: #bf81ef;
 }
 
 
 
 /* Brightness effect for images */
-#navbar li a:hover img {
+#dp-navbar li a:hover img {
   filter: brightness(100%);
   transition: filter 0.3s ;
 }
@@ -60,7 +69,7 @@ nav {
 
 
 /* Container for navbar */
-.navbar {
+.dp-navbar {
   border-radius: 0;
   display: flex;
   justify-content: space-between;
@@ -120,5 +129,3 @@ a {
 .profileWhite {
   transform: scale(1.1);
 }
-
-

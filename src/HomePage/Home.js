@@ -4,8 +4,10 @@ import { Link } from 'react-router-dom';
 import Navbar from '../components/RoundedNavbar';
 import RoundedBack from '../components/RoundedBackground';
 
+
 const Home = () => {
   const searchContainerRef = useRef(null);
+
 
   useEffect(() => {
     const adjustSearchContainerPosition = () => {
@@ -14,22 +16,26 @@ const Home = () => {
       searchContainerRef.current.style.top = (h1Top + h1Height + window.scrollY + window.innerHeight * 0.05) + 'px';
     };
 
+
     adjustSearchContainerPosition();
 
+
     window.addEventListener('resize', adjustSearchContainerPosition);
+
 
     return () => {
       window.removeEventListener('resize', adjustSearchContainerPosition);
     };
   }, []);
 
+
   return (
     <div>
       <RoundedBack />
         <Navbar />
-      <h1>advisabot.</h1>
+      <h1>SAGE</h1>
       <div className="search-container" ref={searchContainerRef}>
-        <input type="text" placeholder="  get advisabot advice..." />
+        <input type="text" placeholder="  get sage advice..." />
         <Link to="/chat">
           <button type="submit"></button>
         </Link>
@@ -37,5 +43,6 @@ const Home = () => {
     </div>
   );
 };
+
 
 export default Home;
