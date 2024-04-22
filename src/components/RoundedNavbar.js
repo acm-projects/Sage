@@ -20,7 +20,7 @@ const RoundedNavbar = () => {
           </Link>
         <div className="navbar-links">
           <Link to="../chat" className="navbar-icon">
-            <img src={chatImage} alt="Chat" />
+            <img src={chatImage} alt="Chat"/>
               chat
           </Link>
           <Link to="../transcript" className="navbar-icon">

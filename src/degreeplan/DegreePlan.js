@@ -6,7 +6,7 @@ import Header from '../components/DPNav';
 import CollapsiblePlans from '../components/CollapsiblePlans';
 import QuickChat from '../components/QuickChat';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import PopUp from '../components/PopUp';
 import whiteStar from '../assets/Wstar.png';
@@ -94,12 +94,60 @@ const DegreePlan = () => {
   const [shouldShowPopup, setShouldShowPopup] = useState(false);
   const [popupClosedByX, setPopupClosedByX] = useState(false); // New state variable
   const [popupSubmitted, setPopupSubmitted] = useState(false);
+
+  const [classes, setClasses] = useState([]);
+  const [semesters, setSemesters] = useState({});
+
+  useEffect(() => {
+    const fetchClasses = async () => {
+      try {
+        const response = await fetch('https://cczyt46ucfu4bzz4lshj26e7gu0bwqgw.lambda-url.us-west-2.on.aws/');
+        const data = await response.json();
+        setClasses(data);
+      } catch (error) {
+        console.error('Error fetching classes:', error);
+      }
+    };
+
+    fetchClasses();
+  }, []); 
+
+  const getDegreePlan = async () => {
+    try {
+      const response = await fetch('https://55rm2jn7ns6d2yfkznmcuqzfom0gvpdc.lambda-url.us-west-2.on.aws/');
+      const data = await response.json();
+      setSemesters(data);
+    } catch (error) {
+      console.error('Error fetching semesters:', error);
+    }
+  };
+
+  const handleGenerateClick = () => {
+    getDegreePlan();
+  };
+
+  const handleRemoveFromPreviousSemester = (courseCode, destinationSemesterKey, movedClass) => {
+    const updatedSemesters = { ...semesters };
+    Object.entries(updatedSemesters).forEach(([semesterKey, semesterClasses]) => {
+      if (Array.isArray(semesterClasses)) {
+        if (semesterKey !== destinationSemesterKey) {
+          console.log('filtering: ' + semesterKey);
+          const updatedClasses = semesterClasses.filter((classItem) => classItem.course_code !== courseCode);
+          updatedSemesters[semesterKey] = updatedClasses;
+        } else {
+          // Add the moved class to the destination semester
+          updatedSemesters[semesterKey] = [...semesterClasses, movedClass];
+        }
+      }
+    });
+    setSemesters(updatedSemesters);
+  };
+
   //const [setStar, setStarImage] = useState(emptyStar);
 
   const toggleMenu = () => {
     setMenuVisible(!menuVisible);
   };
-
 
   //when clicked --> if notSAved (empty star), pull up popup
   //when popup comes up: 
@@ -151,9 +199,7 @@ const DegreePlan = () => {
       <div className='mainDiv'>
       
         <div className='content'>
-          
           <div className='mainBox'>
-              
             <div className='TContainer'>
               <div className='saved' onClick={toggleSaved}>
                 <SavedIcon onClick={() => { if (isSaved === false ) setShouldShowPopup(true); }} src={ (isSaved) ? whiteStar : emptyStar}
@@ -162,37 +208,41 @@ const DegreePlan = () => {
             </div>
             <div className='flexContainer'>
               <div className='allClasses'>
-                <p className=' specialHeader generalFont '>all classes</p>
-                <DropdownContainer>
-                  <DropdownButton onClick={toggleMenu}>filter results</DropdownButton>
-                  {menuVisible && (
-                    <DropdownMenu visible={menuVisible}>
-                      <ul>
-                        <li>taken</li>
-                        <li>not taken</li>
-                      </ul>
-                    </DropdownMenu>
-                  )}
-                </DropdownContainer>
-                <Classes/>
-                <Classes/>
-                <Classes/>
-                <Classes/>
-              </div> 
-              <div className='flexContainer'>
-                <Semester/>
-                <Semester/>
-                <Semester/>
-                <Semester/>
+                <p className='specialHeader generalFont'>Taken Classes</p>
+                  {classes.map((classData) => (
+                    <Classes
+                      key={classData.course_code}
+                      course_code={classData.course_code}
+                      name={classData.name}
+                      prerequisites={classData.prerequisites}
+                      corequisites={classData.corequisites}
+                    />
+                  ))}
               </div>
-              
+              <div className='flexContainer'>
+                {console.log(semesters)}
+                {Object.entries(semesters).map(([semesterName, semesterData]) => { //convert semester object into array of key-value pairs
+                  const [season, year] = semesterName.split(' ');
+                  return (
+                    <Semester
+                      key={semesterName}
+                      season={season}
+                      year={year}
+                      classes={semesterData}
+                      onRemoveFromPreviousSemester={handleRemoveFromPreviousSemester}
+                      semesterKey={season + ' ' + year}
+                      semesters={semesters}
+                    />
+                  );
+                })}
+              </div>
               <PopUpContainer>
                 {shouldShowPopup && <PopUp onClose={closePopup} onSubmit={submitPopup} />}
               </PopUpContainer>
             </div>
           </div>
           <ButtonContainer>
-            <Button onClick={clickMe}>regenerate</Button>
+            <Button onClick={handleGenerateClick}>Generate</Button>
           </ButtonContainer>
           <div className='footerPopUp' style={{display: 'flex', justifyContent: 'flex-end', marginRight:'175px'}}>
             <CollapsiblePlans/>

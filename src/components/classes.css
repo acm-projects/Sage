@@ -29,7 +29,7 @@ justify-content: center; /* Aligmn items at the start of the flex container */
   
   /* Adjust styles for the second div as needed */
   margin-left: 15px ;
-  background: rgba(30, 30, 30, 0.7); /* Background color */
+  background: rgba(175, 175, 175, 0.7); /* Background color */
   border-radius: 20px; /* Adjust the border radius to control the roundness */
   width:400px;
   min-height: 100px;
@@ -40,6 +40,7 @@ justify-content: center; /* Aligmn items at the start of the flex container */
   justify-content:flex-start;
   flex-direction: column;
   overflow-y:hidden;
+  margin-bottom: 15px;
 }
 
 .dragging{
