@@ -81,7 +81,7 @@ const Chat = () => {
       <form onSubmit={handleSubmit} className="text-field">
         <input
           type="text"
-          placeholder=" get advisabot advice..."
+          placeholder=" get sage advice..."
           value={inputText}
           onChange={handleInputChange}
         />

@@ -15,6 +15,10 @@
   src: url('../fonts/Maharlika-Regular.ttf');
 }
 
+@font-face {
+  font-family: 'Raleway';
+  src: url('../fonts/Raleway-VariableFont_wght.ttf');
+}
 
 h1 {
   position: absolute;
@@ -27,8 +31,17 @@ h1 {
   font-size: 12vw;
 }
 
-
-
+.homeh4 {
+  color: white;
+  font-family: 'Raleway';
+  font-size: min(2vw, 20px);
+  font-weight: 300;
+  z-index: 99;
+  position: absolute;
+  top: calc(50% + 3vw);
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
 @media screen and (min-width: 1025px) {
   h1 {
@@ -55,25 +68,23 @@ body {
 }
 
 .search-container input[type="text"] {
-  color: #304D41 !important; /* Darker color */
-}
-
-
-
-
-.search-container input[type="text"] {
-  padding: 1vw 2vw;
+  padding: 1vw 0vw 1vw 2vw;
   width: 47vw;
   display: block;
   border-radius: 10px;
   border: 1px solid transparent;
   font-size: 20px;
   outline: none;
-  font-family: 'SudoVar';
+  font-family: 'SudoVar', sans-serif;
+  text-align: left;
 }
 
-
-
+.search-container input[type="text"]::placeholder {
+  font-family: 'SudoVar'; 
+  font-size: min(2.5vw, 20px);
+  color: rgba(0, 0, 0, 0.35);
+  text-align: left;
+}
 
 .search-container button {
   position: absolute;

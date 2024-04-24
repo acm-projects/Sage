@@ -54,10 +54,6 @@
 }
 
 .text-field input[type="text"] {
-  color: black !important; /* Darker color */
-}
-
-.text-field input[type="text"] {
   padding: 1vw 2vw;
   width: 62.6vw;
   display: block;
@@ -70,7 +66,10 @@
 
 
 .text-field input[type="text"]::placeholder {
-  padding: 0vw 0px;
+  font-family: 'SudoVar'; 
+  font-size: min(2.5vw, 20px);
+  color: rgba(0, 0, 0, 0.35);
+  text-align: left;
 }
 
 .submit-container button {
@@ -81,8 +80,6 @@
   border: none;
   background: none;
 }
-
-
 
 .submit-container button::before {
   content: '';

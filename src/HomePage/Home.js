@@ -34,6 +34,7 @@ const Home = () => {
       <RoundedBack />
         <Navbar />
       <h1>SAGE</h1>
+      <h4 className='homeh4'>Student Advisor and Guidance Engine</h4>
       <div className="search-container" ref={searchContainerRef}>
         <input type="text" placeholder="  get sage advice..." />
         <Link to="/chat">
