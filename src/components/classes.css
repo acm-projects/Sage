@@ -1,39 +1,31 @@
 
-
-
-
-
-
 .truncate {
 overflow: hidden;
 text-overflow: ellipsis;
 }
 
-
-
 .dropArea{
 
-background: rgb(232, 227, 232); /* Background color */
+background: none; /* Background color */
 border-radius: 15px; /* Adjust the border radius to control the roundness */
 width:425px;
 min-height: 370px;
 position:absolute;
 top:55px;
 left:20px;
-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for depth */
 justify-content: center; /* Aligmn items at the start of the flex container */
 }
 
 
 .classes{
-  
+  color: rgba(0, 0, 0, 0.524);
   /* Adjust styles for the second div as needed */
   margin-left: 15px ;
-  background: rgba(175, 175, 175, 0.7); /* Background color */
+  background: rgba(82, 101, 188, 0.137); /* Background color */
   border-radius: 20px; /* Adjust the border radius to control the roundness */
   width:400px;
   min-height: 100px;
-  box-shadow: 0 0 10px rgba(8, 8, 8, 0.6); /* Add a subtle box shadow for depth */
+  box-shadow: 0 0 10px rgba(8, 8, 8, 0.1); /* Add a subtle box shadow for depth */
   position: relative; /* Ensure elements are positioned relative to their container */
   display: flex; /* Use flexbox layout */
   flex-wrap: wrap;
@@ -44,9 +36,9 @@ justify-content: center; /* Aligmn items at the start of the flex container */
 }
 
 .dragging{
-  opacity: 1 !important; /* Ensure full opacity */
-  background-color: #fff !important; /* Ensure original background color */
-  border: 2px solid #000 !important; /* Ensure original border */
+  opacity: 0 !important; /* Ensure full opacity */
+  background-color: #ffffff00 !important; /* Ensure original background color */
+  border: 2px solid #00000000 !important; /* Ensure original border */
   /* Add any other necessary styling to maintain original appearance */
 }
 
@@ -85,7 +77,7 @@ justify-content: center; /* Aligmn items at the start of the flex container */
   margin-left: 12px;
   margin-top: 2px;
   text-overflow: ellipsis;
-  
+  font-style: italic;
   }
 
   .desc{
@@ -98,6 +90,7 @@ justify-content: center; /* Aligmn items at the start of the flex container */
   .classNum{
     margin-left: 12px;
     margin-top: 10px;
+    margin-bottom: 15px;
     text-overflow: ellipsis;
   }
   
@@ -106,12 +99,12 @@ justify-content: center; /* Aligmn items at the start of the flex container */
   }
   
   .classNum{
-  font-size: 18px;
+  font-size: 28px;
   }
 
 
   .dropArea.drag-over {
-    border: 2px dashed #333; /* Example border style when item is being dragged over */
+    border: 2px solid #33333384; /* Example border style when item is being dragged over */
 }
 
 .droppedItem.drag-over-item {
@@ -123,19 +116,20 @@ justify-content: center; /* Aligmn items at the start of the flex container */
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  color: #bf81ef;
+  color: #ffffff72;
   letter-spacing: -1px;
   font-weight:550;
   font-size: 2.4rem; 
-}
-
-.semesterHeader{
-  color: #bf81ef;
+  }
+  
+  .semesterHeader{
+  color: #ffffff72;
   position: absolute;
   top: 12px; /* Adjust as needed */
   left: 25px; /* Adjust as needed */
   letter-spacing: -1px;
   font-weight:550;
   font-size: 2.1rem; 
+  margin-top: 0;
   
-}
+  }

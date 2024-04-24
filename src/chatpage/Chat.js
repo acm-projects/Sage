@@ -6,7 +6,7 @@ import React, { useState, useEffect, useRef } from 'react';
 const Chat = () => {
 
   const [messages, setMessages] = useState([
-    { text: 'Hi Sarah! Im SAGE, your personal AI advisor here at UTD. How may I assist you today?', isUser: false }
+    { text: 'Hi Ethan! Im SAGE, your personal AI advisor here at UTD. How may I assist you today?', isUser: false }
   ]);
 
   const [inputText, setInputText] = useState('');
@@ -15,7 +15,7 @@ const Chat = () => {
 
   const handleInputChange = (e) => {
     setInputText(e.target.value);
-  };
+  };  
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -23,30 +23,46 @@ const Chat = () => {
       setMessages([...messages, { text: inputText, isUser: true }]);
       setInputText('');
       setIsLoading(true);
-
       try {
         console.log('Making API request with input:', inputText);
-        const response = await fetch('https://pki6cib46tujopxxsqre3l5oxu0szrrp.lambda-url.us-west-2.on.aws/', {
+        const response = await fetch('http://localhost:8080/api/chat', { //calling local flask endpoint
           method: 'POST',
           headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
           },
-          body: JSON.stringify({ input: inputText })
+          body: JSON.stringify({ input: inputText }),
         });
-
         if (response.ok) {
           const data = await response.json();
           console.log('API response received:', data);
-          setMessages([...messages, { text: inputText, isUser: true }, { text: data.response, isUser: false }]);
+          setMessages([
+            ...messages,
+            { text: inputText, isUser: true },
+            {
+              text: data.response
+                .replace(/\n/g, '<br>')
+                .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+                .replace(/\*(.*?)\*/g, '<em>$1</em>'),
+              isUser: false,
+              formatted: true,
+            }
+          ]);
         } else {
           console.error('API request failed with status:', response.status);
-          setMessages([...messages, { text: inputText, isUser: true }, { text: 'Oops! Something went wrong.', isUser: false }]);
+          setMessages([
+            ...messages,
+            { text: inputText, isUser: true },
+            { text: 'Oops! Something went wrong.', isUser: false },
+          ]);
         }
       } catch (error) {
         console.error('API request error:', error);
-        setMessages([...messages, { text: inputText, isUser: true }, { text: 'Oops! Something went wrong.', isUser: false }]);
+        setMessages([
+          ...messages,
+          { text: inputText, isUser: true },
+          { text: 'Oops! Something went wrong.', isUser: false },
+        ]);
       }
-
       setIsLoading(false);
     }
   };
@@ -67,7 +83,11 @@ const Chat = () => {
             key={index}
             className={`message ${message.isUser ? 'user-message' : 'bot-message'}`}
           >
-            {message.text}
+            {message.formatted ? (
+              <div dangerouslySetInnerHTML={{ __html: message.text }} />
+            ) : (
+              message.text
+            )}
           </div>
         ))}
         {isLoading && (

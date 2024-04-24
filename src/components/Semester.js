@@ -3,11 +3,12 @@ import './classes.css';
 import React, { useState, useEffect } from 'react';
 import BoxTarget from './BoxTarget';
 import Classes from './Classes';
-
-const TOOL = 'classes';
+import CustomPopup from './CustomPopup';
 
 const Semester = ({ season, year, classes = [], onRemoveFromPreviousSemester , semesterKey, semesters}) => {
   const [droppedClasses, setDroppedClasses] = useState([]);
+  const [showPopup, setShowPopup] = useState(false);
+  const [popupMessage, setPopupMessage] = useState('');
 
   useEffect(() => {
     setDroppedClasses(classes);
@@ -77,8 +78,13 @@ const Semester = ({ season, year, classes = [], onRemoveFromPreviousSemester , s
       console.log('Keeping ' + course_code + ' in ' + semesterKey + ' and deleting from other semesters')
       onRemoveFromPreviousSemester(course_code, semesterKey, item);
     } else {
-      alert('Prerequisites or corequisites are not satisfied, or the class is a prerequisite or corequisite for another class!');
+      setPopupMessage('Prerequisites or corequisites are not satisfied, or the class is a prerequisite or corequisite for another class!');
+      setShowPopup(true);
     }
+  };
+
+  const handlePopupClose = () => {
+    setShowPopup(false);
   };
 
   const removeClassFromSemester = (courseCode) => {
@@ -103,6 +109,13 @@ const Semester = ({ season, year, classes = [], onRemoveFromPreviousSemester , s
           />
         ))}
       </BoxTarget>
+      {showPopup && (
+        <CustomPopup
+          message={popupMessage}
+          duration={3000}
+          onClose={handlePopupClose}
+        />
+      )}
     </div>
   );
 };
