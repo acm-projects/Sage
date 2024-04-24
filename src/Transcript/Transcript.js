@@ -30,10 +30,17 @@ const Transcript = () => {
       const formData = new FormData();
       formData.append("file", file);
       await putS3(file);
-      await startDetection(file.name, user.sub.substring(14));
-      setLoading(false);
-      console.log("FInished Upload");
+      // startDetection call (so basically textract) is inconsistent in how much time it takes
+      // await startDetection(file.name, user.sub.substring(14));
+      
+      // PUT A 20 SECOND DELAY RIGHT HERE
+      await setTimeout(function() {
+        setLoading(false);
+      console.log("Finished Upload");
       history.push("../degreeplan"); // Navigate to "../degreeplan" after upload
+      }, 20000);
+
+      
     }
   };
 

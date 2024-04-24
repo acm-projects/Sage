@@ -197,7 +197,6 @@ const DegreePlan = () => {
   return (
     
       <div className='mainDiv'>
-      
         <div className='content'>
           <div className='mainBox'>
             <div className='TContainer'>
