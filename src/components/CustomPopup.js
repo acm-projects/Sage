@@ -1,3 +1,4 @@
+// CustomPopup.js
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 
@@ -5,8 +6,8 @@ const PopupContainer = styled.div`
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: #f8d7da;
-  border: 1px solid #f5c6cb;
+  background-color: ${({ success }) => (success ? '#d4edda' : '#f8d7da')};
+  border: 1px solid ${({ success }) => (success ? '#c3e6cb' : '#f5c6cb')};
   border-radius: 4px;
   padding: 10px;
   z-index: 9999;
@@ -16,10 +17,10 @@ const PopupContainer = styled.div`
 
 const PopupMessage = styled.p`
   margin: 0;
-  color: #721c24;
+  color: ${({ success }) => (success ? '#155724' : '#721c24')};
 `;
 
-const CustomPopup = ({ message, duration, onClose }) => {
+const CustomPopup = ({ message, duration, onClose, success }) => {
   const [show, setShow] = useState(true);
 
   useEffect(() => {
@@ -38,8 +39,8 @@ const CustomPopup = ({ message, duration, onClose }) => {
   }
 
   return (
-    <PopupContainer show={show}>
-      <PopupMessage>{message}</PopupMessage>
+    <PopupContainer show={show} success={success}>
+      <PopupMessage success={success}>{message}</PopupMessage>
     </PopupContainer>
   );
 };

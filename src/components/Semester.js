@@ -9,6 +9,7 @@ const Semester = ({ season, year, classes = [], onRemoveFromPreviousSemester , s
   const [droppedClasses, setDroppedClasses] = useState([]);
   const [showPopup, setShowPopup] = useState(false);
   const [popupMessage, setPopupMessage] = useState('');
+  const [popupSuccess, setPopupSuccess] = useState(false);
 
   useEffect(() => {
     setDroppedClasses(classes);
@@ -74,11 +75,15 @@ const Semester = ({ season, year, classes = [], onRemoveFromPreviousSemester , s
     );
   
     if (prereqsSatisfied && coreqsSatisfied && relatedClassesConditionsSatisfied) {
-      setDroppedClasses([...droppedClasses, {course_code, name, prerequisites, corequisites}]);
-      console.log('Keeping ' + course_code + ' in ' + semesterKey + ' and deleting from other semesters')
+      setPopupMessage(`${item.course_code} has been successfully moved to ${season} ${year}!`);
+      setPopupSuccess(true);
+      setShowPopup(true);
+      setDroppedClasses([...droppedClasses, { course_code, name, prerequisites, corequisites }]);
+      console.log('Keeping ' + course_code + ' in ' + semesterKey + ' and deleting from other semesters');
       onRemoveFromPreviousSemester(course_code, semesterKey, item);
     } else {
       setPopupMessage('Prerequisites or corequisites are not satisfied, or the class is a prerequisite or corequisite for another class!');
+      setPopupSuccess(false);
       setShowPopup(true);
     }
   };
@@ -114,6 +119,7 @@ const Semester = ({ season, year, classes = [], onRemoveFromPreviousSemester , s
           message={popupMessage}
           duration={3000}
           onClose={handlePopupClose}
+          success={popupSuccess}
         />
       )}
     </div>

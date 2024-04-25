@@ -11,7 +11,6 @@ import './global.css';
 import { DndProvider } from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend';
 import { render } from 'react-dom'
-import Temp from './tempdeg/Temp';
 
 function App() {
   return (
@@ -32,11 +31,7 @@ function App() {
               <Route path ="/profile-page">
                 <Profile />
               </Route>
-              <Route path="/tempdeg">
-                <Temp />
-              </Route>
               <Route path ="/degreeplan">
-                <Header/>
                 <DegreePlan />
               </Route>
             </Switch>

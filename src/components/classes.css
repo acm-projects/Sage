@@ -21,11 +21,11 @@ justify-content: center; /* Aligmn items at the start of the flex container */
   color: rgba(0, 0, 0, 0.524);
   /* Adjust styles for the second div as needed */
   margin-left: 15px ;
-  background: rgba(82, 101, 188, 0.137); /* Background color */
+  background: rgba(119, 142, 242, 0.274); /* Background color */
   border-radius: 20px; /* Adjust the border radius to control the roundness */
   width:400px;
   min-height: 100px;
-  box-shadow: 0 0 10px rgba(8, 8, 8, 0.1); /* Add a subtle box shadow for depth */
+  box-shadow: 0 0 10px rgba(8, 8, 8, 0.123); /* Add a subtle box shadow for depth */
   position: relative; /* Ensure elements are positioned relative to their container */
   display: flex; /* Use flexbox layout */
   flex-wrap: wrap;
@@ -90,7 +90,7 @@ justify-content: center; /* Aligmn items at the start of the flex container */
   .classNum{
     margin-left: 12px;
     margin-top: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     text-overflow: ellipsis;
   }
   
@@ -99,7 +99,7 @@ justify-content: center; /* Aligmn items at the start of the flex container */
   }
   
   .classNum{
-  font-size: 28px;
+  font-size: 30px;
   }
 
 
@@ -133,3 +133,4 @@ justify-content: center; /* Aligmn items at the start of the flex container */
   margin-top: 0;
   
   }
+  

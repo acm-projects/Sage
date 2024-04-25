@@ -10,10 +10,11 @@ const {PutCommand, DynamoDBDocumentClient} = require("@aws-sdk/lib-dynamodb");
 const REGION = "us-west-2"; // Oregon
 var creds =
 {
-    accessKeyId: KEY,
-    secretAccessKey: SECRETKEY,
+    accessKeyId: KEYID,
+    secretAccessKey: KEY,
 };
 const inputBucket = "transcript-bucket-4-2-2024"; // Bucket that Textract is getting transcript from
+
 
 const documentName = "transcript.4-7-24.pdf";
 // const inputDocument = "Syed_Mohammad_Abis_Naqvi_Transcript.pdf";

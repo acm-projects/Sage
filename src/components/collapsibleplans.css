@@ -40,13 +40,14 @@
 }
 
 .quickChatButton{
-
+    color: rgba(0, 0, 0, 0.524);
     width:310px;
-    height:43px;
-    background-color: #6962AD;
-    border-radius: 5px 5px 0 0;
+    height:23px;
+    background: rgba(119, 142, 242, 0.51); /* Background color */
+    border-radius: 10px 10px 0 0;
     cursor: pointer;
-
+    margin-bottom: 20px;
+    margin-left: 1035px;
 }
 
 .item {
@@ -87,7 +88,8 @@
   }
 
   .whiteChat{
-    width: 35px; /* Set the desired width */
+    margin-top: 14px;
+    width: 25px; /* Set the desired width */
     height: auto; /* Maintain aspect ratio */
     margin-left: -15px;
   }

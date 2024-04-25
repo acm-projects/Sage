@@ -27,7 +27,7 @@ const QuickChat = () => {
         <div className='quickChatButton generalFont' onClick={toggleCollapse}>
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%' }}>
             <img src={Wchat} alt="whiteChat" className="whiteChat" style={{marginRight: '5px', marginBottom: '15px', marginRight:'5px'}}/>
-            <p style={{ fontSize: '27px', textAlign: 'center', letterSpacing: '2px', margin: '0', marginLeft: '10px' }}>quick chat</p>
+            <p className="" style={{ fontSize: '20px', textAlign: 'center', letterSpacing: '2px', margin: '0', marginLeft: '10px' }}>quick chat</p>
           </div>
         </div>
         <div className='savedCardContainer chatScreen' style={accordionStyle}>

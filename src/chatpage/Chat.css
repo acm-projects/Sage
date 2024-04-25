@@ -150,7 +150,7 @@ filter: grayscale(100%) brightness(0);
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background-color: #4a22ba;
+  background-color: #4a22ba !important;
   margin: 0 5px;
   animation: loading 1.4s infinite ease-in-out both;
 }

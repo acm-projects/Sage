@@ -38,7 +38,7 @@ h1 {
   font-weight: 300;
   z-index: 99;
   position: absolute;
-  top: calc(50% + 3vw);
+  top: calc(50% + 30px);
   left: 50%;
   transform: translate(-50%, -50%);
 }
