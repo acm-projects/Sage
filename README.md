@@ -1,8 +1,8 @@
 ![1_iGdFJTHMIG79N2HChWaooQ](https://github.com/acm-projects/Advisabot/assets/98787282/4cf90921-a07d-4933-b549-ec732a79b249)
-# <h1 align="center">Sage</h1>
+# <h1 align="center">SAGE</h1>
 
 <p align="center">
-Have you ever asked your advisor a question only to wait weeks for a response? Many times, advisors get flooded with questions that have simple answers or problems that are easy to resolve. Sage is an advisor chatbot that can answer your questions quickly and efficiently, so you don’t have to worry about it. On top of this, Sage can view your profile to help you make decisions about future classes and even generate personalized degree plans. Take the stress out of the logistics and just ask Sage for help with your inquiries and classes!
+Have you ever asked your advisor a question only to wait weeks for a response? Many times, advisors get flooded with questions that have simple answers or problems that are easy to resolve. SAGE is an advisor chatbot that can answer your questions quickly and efficiently, so you don’t have to worry about it. On top of this, SAGE can view your profile to help you make decisions about future classes and even generate personalized degree plans. Take the stress out of the logistics and just ask SAGE for help with your inquiries and classes!
 </p>
 
 ## MVP (Minimum Viable Product)
