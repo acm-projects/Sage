@@ -7,6 +7,7 @@ Have you ever asked your advisor a question only to wait weeks for a response? M
 
 ## MVP (Minimum Viable Product)
 
+
 * Create and train a chatbot that can answer FAQs listed on the ECS Advising Website using Amazon Lex and Amazon Kendra
 * Create an algorithm that can generate a degree plan based on major, credit hours, classes taken
 * Import Transcript in and use OCR/Parser to get classes, major, GPA, credit hours automatically
