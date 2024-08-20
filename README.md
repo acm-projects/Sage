@@ -1,4 +1,4 @@
-![1_iGdFJTHMIG79N2HChWaooQ](https://github.com/acm-projects/Advisabot/assets/98787282/4cf90921-a07d-4933-b549-ec732a79b249)
+![image](https://github.com/user-attachments/assets/2a438d31-7a3e-46ac-940e-424235787770)
 # <h1 align="center">SAGE</h1>
 
 <p align="center">
