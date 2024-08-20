@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/2a438d31-7a3e-46ac-940e-424235787770)
+![image align="center"](https://github.com/user-attachments/assets/2a438d31-7a3e-46ac-940e-424235787770)
 # <h1 align="center">SAGE</h1>
 
 <p align="center">
